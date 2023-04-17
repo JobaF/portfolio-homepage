@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-300 font-serif">
+    <div className="min-h-screen bg-gray-300 font-sans">
       <nav className="h-14 flex justify-around items-center bg-gray-800">
         <Link href="#hero-section" scroll={false}>
           Home
@@ -10,14 +10,14 @@ export default function Home() {
         <Link href="#project-section">Projects</Link>
         <Link href="#about-section">About</Link>
       </nav>
-      <section id="hero-section" className="px-5 pt-5 text-left bg-gray-700">
-        <div className="h-3/4 flex flex-col items-center justify-center">
+      <section id="hero-section" className="px-5 pt-5 bg-gray-700">
+        <div className="h-3/4 text-center">
           <p className="text-3xl mt-2">Hello,</p>
-          <p className="text-3xl">
-            I'm <span className="italic underline ">Jabo Fecht</span>
+          <p className="text-4xl">
+            I'm <span className="italic text-gray-300">Jabo Fecht</span>
           </p>
-          <p className="text-xl mt-2 text-gray-800">
-            Fullstack Developer & <br /> Master of Information Systems
+          <p className="text-xl mt-2 text-gray-900">
+            Fullstack Developer & <br /> Master of Science
           </p>
         </div>
         <img
@@ -28,7 +28,7 @@ export default function Home() {
       </section>
 
       <section
-        className="pt-5 px-5 pb-10 bg-gray-600 w-full flex flex-col items-center"
+        className="pt-10 px-5 pb-10 bg-gray-600 w-full flex flex-col items-center"
         id="project-section"
       >
         <p className="text-3xl text-center">Recent Work</p>
@@ -36,12 +36,39 @@ export default function Home() {
           Here are a few past projects I've worked on.
         </p>
 
-        <div className="mb-5 mt-5 w-2/3 aspect-square bg-red-600">
-          Project 1
+        <div className="rounded-lg mb-5 mt-5 w-2/3 shadow-xl border border-solid border-neutral-800 overflow-hidden">
+          <img
+            src="coffee.png"
+            alt="Coffee Shop Project"
+            className="object-cover"
+          />
+          <p className="text-2xl text-gray-900 text-center">Coffee Shop</p>
         </div>
-        <div className="mb-5 w-2/3 aspect-square bg-red-700">Project 2</div>
-        <div className="mb-5 w-2/3 aspect-square bg-red-800">Project 3</div>
-        <div className="mb-5 w-2/3 aspect-square bg-red-900">Project 4</div>
+        <div className="rounded-lg mb-5 mt-5 w-2/3 shadow-xl border border-solid border-neutral-800 overflow-hidden">
+          <img
+            src="coffee.png"
+            alt="Coffee Shop Project"
+            className="object-cover"
+          />
+          <p className="text-2xl text-gray-900 text-center">
+            Data Science Master Thesis
+          </p>
+        </div>
+        <div className="rounded-lg mb-5 mt-5 w-2/3 shadow-xl border border-solid border-neutral-800 overflow-hidden">
+          <img src="aiart.png" alt="AI Art Project" className="object-cover" />
+          <p className="text-2xl text-gray-900 text-center">AI Art</p>
+        </div>
+        <div className="rounded-lg mb-5 mt-5 w-2/3 shadow-xl border border-solid border-neutral-800 overflow-hidden">
+          <img
+            src="coffee.png"
+            alt="Coffee Shop Project"
+            className="object-cover"
+          />
+          <p className="text-2xl text-gray-900 text-center">Coffee Shop</p>
+        </div>
+      </section>
+      <section id="about-section" className="pt-10 px-5 pb-10 bg-gray-500">
+        <p className="text-3xl text-center">About Me</p>
       </section>
     </div>
   )
