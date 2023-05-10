@@ -1,6 +1,5 @@
 "use client"
 import ArrowTopRightIcon from "./components/icons/ArrowTopRightIcon"
-import ArrowTopRight from "./components/icons/ArrowTopRightIcon"
 import BurgerIcon from "./components/icons/BurgerIcon"
 import { GithubIcon } from "./components/icons/GithubIcon"
 
@@ -27,22 +26,60 @@ export default function Home() {
 						Hey, <br />
 						I'm Jabo Fecht
 					</h3>
-					<p className="mt-3 text-gray-400">Frontend Developer</p>
+					<p className="mt-2 text-gray-400">Frontend Developer</p>
 					<p className="text-gray-400">M. Sc. Information Systems</p>
 					<button className="mt-4 h-12 w-32 rounded-xl bg-gradient-to-r from-sky-500 to-indigo-500 drop-shadow-xl hover:bg-gradient-to-r hover:from-sky-800 hover:to-indigo-800">
 						Download CV
 					</button>
 				</div>
 			</section>
-			<section className="mt-14 flex h-screen flex-col items-center">
+			<section className="mb-12 mt-14 flex flex-col items-center">
 				<div className="text-3xl underline">My Projects</div>
 				<div className="relative mt-8">
 					<div className=" h-72 w-72 items-start justify-center overflow-hidden rounded-lg">
-						<div className="absolute inset-0  rounded-lg bg-orange-600 opacity-50 blur-md"></div>
-						<div className="relative inset-0 flex h-full w-full items-start justify-between rounded-md bg-pomodoro_timer bg-cover px-3 pt-2 text-left">
-							<span className="text-xl ">Pomodoro App </span>
+						<div className="absolute inset-0  rounded-lg bg-orange-600 opacity-70 blur-md"></div>
+						<div className="relative inset-0 flex h-full w-full items-start justify-between rounded-md bg-pomodoro bg-cover px-3 pt-2 text-left">
+							<span className="text-xl ">Pomodoro app</span>
 							<ArrowTopRightIcon url={"https://pomodoro.jabofecht.com"} />
 							<GithubIcon url={"https://github.com/JobaF/pomodoro-app"} />
+						</div>
+					</div>
+				</div>
+				<div className="relative mt-8">
+					<div className=" h-72 w-72 items-start justify-center overflow-hidden rounded-lg">
+						<div className="absolute inset-0  rounded-lg bg-black opacity-70 blur-md"></div>
+						<div className="relative inset-0 flex h-full w-full items-start justify-between rounded-md bg-dictionary bg-cover px-3 pt-2 text-left">
+							<span className="text-xl ">Dictionary app</span>
+							<ArrowTopRightIcon
+								url={"https://dictionary.jabofecht.com/dictionary/keyboard"}
+							/>
+							<GithubIcon url={"https://github.com/JobaF/dictionary-app"} />
+						</div>
+					</div>
+				</div>
+				<div className="relative mt-8">
+					<div className=" h-72 w-72 items-start justify-center overflow-hidden rounded-lg">
+						<div className="absolute inset-0  rounded-lg bg-gray-600 opacity-70 blur-md"></div>
+						<div className="relative inset-0 flex h-full w-full items-start justify-between rounded-md bg-clock bg-cover px-3 pt-2 text-left">
+							<span className="text-xl ">Age calculator</span>
+							<ArrowTopRightIcon
+								url={"https://datecalculator.jabofecht.com/"}
+							/>
+							<GithubIcon
+								url={"https://github.com/JobaF/frontendmentor-age-calculator"}
+							/>
+						</div>
+					</div>
+				</div>
+				<div className="relative mt-8">
+					<div className=" h-72 w-72 items-start justify-center overflow-hidden rounded-lg">
+						<div className="absolute inset-0  rounded-lg bg-gray-600 opacity-70 blur-md"></div>
+						<div className="relative inset-0 flex h-full w-full items-start justify-between rounded-md bg-calculator bg-cover px-3 pt-2 text-left">
+							<span className="text-xl ">Apple-style calculator</span>
+							<ArrowTopRightIcon
+								url={"https://applecalculator.jabofecht.com/"}
+							/>
+							<GithubIcon url={"https://github.com/JobaF/odin-calculator"} />
 						</div>
 					</div>
 				</div>

@@ -2,9 +2,15 @@ import { FC } from "react"
 
 interface ArrowTopRightIconProps {
 	url: string
+	color?: string
+	hoverColor?: string
 }
 
-const ArrowTopRightIcon: FC<ArrowTopRightIconProps> = ({ url }) => {
+const ArrowTopRightIcon: FC<ArrowTopRightIconProps> = ({
+	url,
+	color = "white",
+	hoverColor = "hover:stroke-black",
+}) => {
 	return (
 		<a href={url} target="_blank">
 			<svg
@@ -12,8 +18,8 @@ const ArrowTopRightIcon: FC<ArrowTopRightIconProps> = ({ url }) => {
 				fill="none"
 				viewBox="0 0 24 24"
 				strokeWidth={2}
-				stroke="white"
-				className="hover:fill:white absolute bottom-2 right-2 h-6 w-6 hover:stroke-black"
+				stroke={color}
+				className={`absolute bottom-2 right-2 h-6 w-6 ${hoverColor}`}
 			>
 				<path
 					strokeLinecap="round"

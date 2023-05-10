@@ -16,7 +16,10 @@ module.exports = {
 				crimson: ["Sora", ...defaultTheme.fontFamily.sans],
 			},
 			backgroundImage: {
-				pomodoro_timer: "url('/pomodoro_timer.png')",
+				pomodoro: "url('/pomodoro.jpg')",
+				dictionary: "url('/dictionary.jpg')",
+				clock: "url('/clock.jpg')",
+				calculator: "url('/calculator.jpg')",
 			},
 		},
 	},
