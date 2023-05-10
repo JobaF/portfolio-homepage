@@ -13,7 +13,10 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				crimson: ["Oswald", ...defaultTheme.fontFamily.sans],
+				crimson: ["Sora", ...defaultTheme.fontFamily.sans],
+			},
+			backgroundImage: {
+				pomodoro_timer: "url('/pomodoro_timer.png')",
 			},
 		},
 	},
