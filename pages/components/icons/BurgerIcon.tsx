@@ -1,3 +1,4 @@
+"use client"
 import { FC } from "react"
 
 interface BurgerIconProps {}
@@ -5,12 +6,13 @@ interface BurgerIconProps {}
 const BurgerIcon: FC<BurgerIconProps> = ({}) => {
 	return (
 		<svg
+			id="hamburger-button"
 			xmlns="http://www.w3.org/2000/svg"
 			fill="none"
 			viewBox="0 0 24 24"
 			strokeWidth={2}
 			stroke="white"
-			className="h-8 w-8 sm:hidden"
+			className="h-8 w-8 cursor-pointer sm:hidden"
 		>
 			<path
 				strokeLinecap="round"

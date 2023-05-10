@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 import ArrowTopRightIcon from "./components/icons/ArrowTopRightIcon"
 import BurgerIcon from "./components/icons/BurgerIcon"
@@ -9,7 +11,7 @@ export default function Home() {
 			<nav className="z-10 flex h-14 items-center justify-between bg-gray-800 px-8">
 				<p className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border bg-gray-700 p-1 text-lg ">
 					JF
-				</p>{" "}
+				</p>
 				<BurgerIcon />
 			</nav>
 			<section>
@@ -36,6 +38,7 @@ export default function Home() {
 					</button>
 				</div>
 			</section>
+
 			<section className="mb-12 mt-20 flex flex-col items-center">
 				<div className="text-3xl underline">My Projects</div>
 				<div className="relative mt-8">
