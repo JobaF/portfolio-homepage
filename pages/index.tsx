@@ -24,7 +24,7 @@ export default function Home() {
 				<div className="text-center">
 					<h3 className="mt-12 text-4xl">
 						Hey, <br />
-						I'm Jabo Fecht
+						I&apos;m Jabo Fecht
 					</h3>
 					<p className="mt-2 text-gray-400">Frontend Developer</p>
 					<p className="text-gray-400">M. Sc. Information Systems</p>
