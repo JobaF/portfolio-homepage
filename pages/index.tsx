@@ -1,3 +1,4 @@
+import Image from "next/image"
 import ArrowTopRightIcon from "./components/icons/ArrowTopRightIcon"
 import BurgerIcon from "./components/icons/BurgerIcon"
 import GithubIcon from "./components/icons/GithubIcon"
@@ -14,11 +15,9 @@ export default function Home() {
 			<section>
 				<div className="mt-14 flex flex-col items-center justify-center">
 					<div className="absolute z-0 aspect-square h-72 rounded-full bg-gradient-to-r from-sky-600 to-indigo-600 opacity-60 blur-xl"></div>
-					<img
-						src="/portraitlogo.png"
-						alt="Portrait of Developer"
-						className="z-10 aspect-square h-60"
-					/>
+					<div className="relative z-10 aspect-square h-60">
+						<Image src={"/portraitlogo.png"} alt="Avatar" fill={true} />
+					</div>
 				</div>
 				<div className="text-center">
 					<h3 className="mt-12 text-4xl">
