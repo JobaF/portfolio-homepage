@@ -16,7 +16,12 @@ export default function Home() {
 				<div className="mt-14 flex flex-col items-center justify-center">
 					<div className="absolute z-0 aspect-square h-72 rounded-full bg-gradient-to-r from-sky-600 to-indigo-600 opacity-60 blur-xl"></div>
 					<div className="relative z-10 aspect-square h-60">
-						<Image src={"/portraitlogo.png"} alt="Avatar" fill={true} />
+						<Image
+							src={"/portraitlogo.png"}
+							alt="Avatar"
+							fill={true}
+							loading="eager"
+						/>
 					</div>
 				</div>
 				<div className="text-center">
@@ -57,7 +62,7 @@ export default function Home() {
 				</div>
 				<div className="relative mt-8">
 					<div className=" h-72 w-72 items-start justify-center overflow-hidden rounded-lg">
-						<div className="absolute inset-0  rounded-lg bg-gray-600 opacity-70 blur-md"></div>
+						<div className="absolute inset-0  rounded-lg bg-gray-700 opacity-80 blur-md"></div>
 						<div className="relative inset-0 flex h-full w-full items-start justify-between rounded-md bg-clock bg-cover px-3 pt-2 text-left">
 							<span className="text-xl ">Age calculator</span>
 							<ArrowTopRightIcon
@@ -71,7 +76,7 @@ export default function Home() {
 				</div>
 				<div className="relative mt-8">
 					<div className=" h-72 w-72 items-start justify-center overflow-hidden rounded-lg">
-						<div className="absolute inset-0  rounded-lg bg-gray-600 opacity-70 blur-md"></div>
+						<div className="absolute inset-0  rounded-lg bg-yellow-600 opacity-70 blur-md"></div>
 						<div className="relative inset-0 flex h-full w-full items-start justify-between rounded-md bg-calculator bg-cover px-3 pt-2 text-left">
 							<span className="text-xl ">Apple-style calculator</span>
 							<ArrowTopRightIcon
