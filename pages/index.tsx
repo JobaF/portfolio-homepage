@@ -1,4 +1,3 @@
-"use client"
 import ArrowTopRightIcon from "./components/icons/ArrowTopRightIcon"
 import BurgerIcon from "./components/icons/BurgerIcon"
 import GithubIcon from "./components/icons/GithubIcon"
@@ -33,7 +32,7 @@ export default function Home() {
 					</button>
 				</div>
 			</section>
-			<section className="mb-12 mt-14 flex flex-col items-center">
+			<section className="mb-12 mt-20 flex flex-col items-center">
 				<div className="text-3xl underline">My Projects</div>
 				<div className="relative mt-8">
 					<div className=" h-72 w-72 items-start justify-center overflow-hidden rounded-lg">
@@ -77,7 +76,7 @@ export default function Home() {
 						<div className="relative inset-0 flex h-full w-full items-start justify-between rounded-md bg-calculator bg-cover px-3 pt-2 text-left">
 							<span className="text-xl ">Apple-style calculator</span>
 							<ArrowTopRightIcon
-								url={"https://applecalculator.jabofecht.com/"}
+								url={"https://jobaf.github.io/odin-calculator/"}
 							/>
 							<GithubIcon url={"https://github.com/JobaF/odin-calculator"} />
 						</div>
