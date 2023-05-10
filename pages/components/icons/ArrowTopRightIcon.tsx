@@ -1,17 +1,19 @@
 import { FC } from "react"
 
-interface ArrowTopRightProps {}
+interface ArrowTopRightIconProps {
+	url: string
+}
 
-const ArrowTopRight: FC<ArrowTopRightProps> = ({}) => {
+const ArrowTopRightIcon: FC<ArrowTopRightIconProps> = ({ url }) => {
 	return (
-		<a href="https://pomodoro.jabofecht.com" target="_blank">
+		<a href={url} target="_blank">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				fill="none"
 				viewBox="0 0 24 24"
 				strokeWidth={2}
 				stroke="white"
-				className="h-6 w-6"
+				className="hover:fill:white absolute bottom-2 right-2 h-6 w-6 hover:stroke-black"
 			>
 				<path
 					strokeLinecap="round"
@@ -23,4 +25,4 @@ const ArrowTopRight: FC<ArrowTopRightProps> = ({}) => {
 	)
 }
 
-export default ArrowTopRight
+export default ArrowTopRightIcon

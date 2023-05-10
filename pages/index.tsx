@@ -1,6 +1,8 @@
 "use client"
-import ArrowTopRight from "./components/icons/ArrowTopRight"
+import ArrowTopRightIcon from "./components/icons/ArrowTopRightIcon"
+import ArrowTopRight from "./components/icons/ArrowTopRightIcon"
 import BurgerIcon from "./components/icons/BurgerIcon"
+import { GithubIcon } from "./components/icons/GithubIcon"
 
 export default function Home() {
 	return (
@@ -38,8 +40,9 @@ export default function Home() {
 					<div className=" h-72 w-72 items-start justify-center overflow-hidden rounded-lg">
 						<div className="absolute inset-0  rounded-lg bg-orange-600 opacity-50 blur-md"></div>
 						<div className="relative inset-0 flex h-full w-full items-start justify-between rounded-md bg-pomodoro_timer bg-cover px-3 pt-2 text-left">
-							<span className="relative text-xl ">Pomodoro App </span>
-							<ArrowTopRight />
+							<span className="text-xl ">Pomodoro App </span>
+							<ArrowTopRightIcon url={"https://pomodoro.jabofecht.com"} />
+							<GithubIcon url={"https://github.com/JobaF/pomodoro-app"} />
 						</div>
 					</div>
 				</div>
