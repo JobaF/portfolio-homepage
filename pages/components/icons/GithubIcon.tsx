@@ -7,7 +7,7 @@ interface GithubIconProps {
 	hoverColor?: string
 }
 
-export const GithubIcon: FC<GithubIconProps> = ({
+const GithubIcon: FC<GithubIconProps> = ({
 	url,
 	color = "white",
 	hoverColor = "hover:stroke-black",
@@ -18,3 +18,5 @@ export const GithubIcon: FC<GithubIconProps> = ({
 		</a>
 	)
 }
+
+export default GithubIcon

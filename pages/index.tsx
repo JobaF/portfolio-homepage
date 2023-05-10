@@ -1,7 +1,7 @@
 "use client"
 import ArrowTopRightIcon from "./components/icons/ArrowTopRightIcon"
 import BurgerIcon from "./components/icons/BurgerIcon"
-import { GithubIcon } from "./components/icons/GithubIcon"
+import GithubIcon from "./components/icons/GithubIcon"
 
 export default function Home() {
 	return (
