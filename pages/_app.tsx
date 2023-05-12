@@ -7,6 +7,7 @@ export default function App({ Component, pageProps }: AppProps) {
 		<>
 			<Head>
 				<title>Jabo Fecht</title>
+
 				<link
 					href="https://fonts.googleapis.com/css2?family=Sora&display=swap"
 					rel="stylesheet"

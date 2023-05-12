@@ -5,6 +5,7 @@ import ArrowTopRightIcon from "./components/icons/ArrowTopRightIcon"
 import BurgerIcon from "./components/icons/BurgerIcon"
 import GithubIcon from "./components/icons/GithubIcon"
 import Credits from "./components/Credits"
+import { useRef, useState } from "react"
 
 type Project = {
 	name: string
@@ -94,100 +95,151 @@ export default function Home() {
 		},
 	]
 
+	const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
+	const workExperienceRef = useRef<null | HTMLElement>(null)
+	const projectRef = useRef<null | HTMLElement>(null)
+	const educationRef = useRef<null | HTMLElement>(null)
+	const homeRef = useRef<null | HTMLElement>(null)
+	const menuPoints = [
+		{ text: "Home", ref: homeRef },
+		{ text: "Projects", ref: projectRef },
+		{ text: "Education", ref: educationRef },
+		{ text: "Work experience", ref: workExperienceRef },
+	]
+
 	return (
 		<div className="flex flex-col bg-gray-900 font-crimson text-white">
-			<nav className="z-10 flex h-14 items-center justify-between bg-gray-800 px-8">
-				<p className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border bg-gray-700 p-1 text-lg ">
+			<nav className="z-30 flex h-14 items-center justify-between bg-gray-800 px-8">
+				<p className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border p-1 text-lg hover:bg-gray-700">
 					JF
 				</p>
-				<BurgerIcon />
+				<BurgerIcon
+					onClickFunction={() => setIsMenuOpen((prev) => !prev)}
+					isMenuOpen={isMenuOpen}
+				/>
 			</nav>
-			<section>
-				<div className="mt-14 flex flex-col items-center justify-center">
-					<div className="absolute z-0 aspect-square h-72 rounded-full bg-gradient-to-r from-sky-600 to-indigo-600 opacity-60 blur-xl"></div>
-					<div className="relative z-10 aspect-square h-60">
-						<Image
-							src={"/portraitlogo.png"}
-							alt="Avatar"
-							fill={true}
-							loading="eager"
-						/>
+			{isMenuOpen && (
+				<>
+					<div className="absolute top-12 z-20 flex h-1/3 w-full flex-col items-center justify-around bg-gray-900 pt-4 opacity-95">
+						{menuPoints.map((menuPoint) => (
+							<div
+								onClick={() => {
+									setIsMenuOpen(false)
+									if (menuPoint.ref && menuPoint.ref.current) {
+										setTimeout(
+											() =>
+												menuPoint.ref.current!.scrollIntoView({
+													behavior: "smooth",
+												}),
+											200
+										)
+									}
+								}}
+								className="w-full cursor-pointer text-center text-xl"
+							>
+								{menuPoint.text}
+							</div>
+						))}
 					</div>
-				</div>
-				<div className="text-center">
-					<h3 className="mt-12 text-4xl">
-						Hey, <br />
-						I&apos;m Jabo Fecht
-					</h3>
-					<p className="mt-2 text-gray-400">Frontend Developer</p>
-					<p className="text-gray-400">M. Sc. Information Systems</p>
-					<a
-						href="mailto:hi@jabofecht.com"
-						className="mt-4 flex items-center justify-center"
-					>
-						<div className="flex h-12 w-32 items-center justify-center rounded-xl bg-gradient-to-r from-sky-500 to-indigo-500 drop-shadow-xl hover:bg-gradient-to-r hover:from-sky-800 hover:to-indigo-800 hover:shadow-inner hover:shadow-black">
-							Contact me
+				</>
+			)}
+			<>
+				<section id="home" ref={homeRef}>
+					<div className="mt-14 flex flex-col items-center justify-center">
+						<div className="absolute aspect-square h-72 rounded-full bg-gradient-to-r from-sky-600 to-indigo-600 opacity-60 blur-xl"></div>
+						<div className="relative aspect-square h-60">
+							<Image
+								src={"/portraitlogo.png"}
+								alt="Avatar"
+								fill={true}
+								loading="eager"
+							/>
 						</div>
-					</a>
-				</div>
-			</section>
-
-			<section className="mb-12 mt-20 flex flex-col items-center">
-				<div className="text-3xl underline">My Projects</div>
-				{projects.map((project, i) => (
-					<div
-						key={project.name + i}
-						className="mt-8 h-72 w-72 items-start justify-center overflow-hidden rounded-lg shadow-lg shadow-black"
-					>
-						<div
-							className={`${project.tailwindImageTag} relative inset-0 flex h-full w-full items-start justify-between rounded-md bg-cover px-3 pt-2 text-left`}
+					</div>
+					<div className="text-center">
+						<h3 className="mt-12 text-4xl">
+							Hey, <br />
+							I&apos;m Jabo Fecht
+						</h3>
+						<p className="mt-2 text-gray-400">Frontend Developer</p>
+						<p className="text-gray-400">M. Sc. Information Systems</p>
+						<a
+							href="mailto:hi@jabofecht.com"
+							className="mt-4 flex items-center justify-center"
 						>
-							<span className="text-xl ">{project.name}</span>
-							<ArrowTopRightIcon url={project.projectURL} />
-							<GithubIcon url={project.githubURL} />
+							<div className="flex h-12 w-32 items-center justify-center rounded-xl bg-gradient-to-r from-sky-500 to-indigo-500 drop-shadow-xl hover:bg-gradient-to-r hover:from-sky-800 hover:to-indigo-800 hover:shadow-inner hover:shadow-black">
+								Contact me
+							</div>
+						</a>
+					</div>
+				</section>
+
+				<section
+					className="mb-12 mt-20 flex flex-col items-center"
+					ref={projectRef}
+				>
+					<div className="text-3xl underline">My Projects</div>
+					{projects.map((project, i) => (
+						<div
+							key={project.name + i}
+							className="mt-8 h-72 w-72 items-start justify-center overflow-hidden rounded-lg shadow-lg shadow-black"
+						>
+							<div
+								className={`${project.tailwindImageTag} relative inset-0 flex h-full w-full items-start justify-between rounded-md bg-cover px-3 pt-2 text-left`}
+							>
+								<span className="text-xl ">{project.name}</span>
+								<ArrowTopRightIcon url={project.projectURL} />
+								<GithubIcon url={project.githubURL} />
+							</div>
 						</div>
+					))}
+				</section>
+				<section
+					className="mb-10 mt-10 flex flex-col items-center"
+					ref={educationRef}
+				>
+					<div className="mb-4 text-center text-3xl underline">Education</div>
+					{education.map((item, i) => (
+						<div
+							key={i}
+							className="mt-4 flex w-72 flex-col rounded-lg bg-gray-800 p-6 shadow-md shadow-black"
+						>
+							<div className="text-lg">{item.degree}</div>
+							<div className="text-sm text-gray-400">{item.institution}</div>
+							<div className="text-sm text-gray-400">{item.period}</div>
+							<ul className="flex list-disc flex-col gap-1 pl-3 pt-2 text-sm">
+								{item.infos.map((info, i) => (
+									<li key={item.degree + i}>{info}</li>
+								))}
+							</ul>
+						</div>
+					))}
+				</section>
+				<section
+					className="mb-10 mt-10 flex flex-col items-center"
+					ref={workExperienceRef}
+				>
+					<div className="mb-4 text-center text-3xl underline">
+						Work Experience
 					</div>
-				))}
-			</section>
-			<section className="mb-10 mt-10 flex flex-col items-center">
-				<div className="mb-4 text-center text-3xl underline">Education</div>
-				{education.map((item, i) => (
-					<div
-						key={i}
-						className="mt-4 flex w-72 flex-col rounded-lg bg-gray-800 p-6 shadow-md shadow-black"
-					>
-						<div className="text-lg">{item.degree}</div>
-						<div className="text-sm text-gray-400">{item.institution}</div>
-						<div className="text-sm text-gray-400">{item.period}</div>
-						<ul className="flex list-disc flex-col gap-1 pl-3 pt-2 text-sm">
-							{item.infos.map((info, i) => (
-								<li key={item.degree + i}>{info}</li>
-							))}
-						</ul>
-					</div>
-				))}
-			</section>
-			<section className="mb-10 mt-10 flex flex-col items-center">
-				<div className="mb-4 text-center text-3xl underline">
-					Work Experience
-				</div>
-				{workExperience.map((item, i) => (
-					<div
-						key={i}
-						className="mt-4 flex w-72 flex-col rounded-lg bg-gray-800 p-6 shadow-md shadow-black"
-					>
-						<div className="text-xl">{item.position}</div>
-						<div className="text-sm text-gray-400">{item.institution}</div>
-						<div className="text-sm text-gray-400">{item.period}</div>
-						<ul className="flex list-disc flex-col gap-1 pl-3 pt-2 text-sm">
-							{item.infos.map((info, i) => (
-								<li key={item.institution + i}>{info}</li>
-							))}
-						</ul>
-					</div>
-				))}
-			</section>
-			<Credits />
+					{workExperience.map((item, i) => (
+						<div
+							key={i}
+							className="mt-4 flex w-72 flex-col rounded-lg bg-gray-800 p-6 shadow-md shadow-black"
+						>
+							<div className="text-xl">{item.position}</div>
+							<div className="text-sm text-gray-400">{item.institution}</div>
+							<div className="text-sm text-gray-400">{item.period}</div>
+							<ul className="flex list-disc flex-col gap-1 pl-3 pt-2 text-sm">
+								{item.infos.map((info, i) => (
+									<li key={item.institution + i}>{info}</li>
+								))}
+							</ul>
+						</div>
+					))}
+				</section>
+				<Credits />
+			</>
 		</div>
 	)
 }
