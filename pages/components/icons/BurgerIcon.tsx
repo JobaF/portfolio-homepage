@@ -8,7 +8,10 @@ interface BurgerIconProps {
 
 const BurgerIcon: FC<BurgerIconProps> = ({ onClickFunction, isMenuOpen }) => {
 	return (
-		<div className="" onClick={onClickFunction}>
+		<div
+			className="h-9 w-9 cursor-pointer rounded-md p-0.5 hover:bg-gray-700 sm:hidden"
+			onClick={onClickFunction}
+		>
 			{isMenuOpen ? (
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +19,7 @@ const BurgerIcon: FC<BurgerIconProps> = ({ onClickFunction, isMenuOpen }) => {
 					viewBox="0 0 24 24"
 					strokeWidth={1.5}
 					stroke="currentColor"
-					className="h-9 w-9 cursor-pointer rounded-md p-0.5 ease-in-out hover:bg-gray-700 sm:hidden"
+					className=""
 				>
 					<path
 						strokeLinecap="round"
@@ -32,7 +35,7 @@ const BurgerIcon: FC<BurgerIconProps> = ({ onClickFunction, isMenuOpen }) => {
 					viewBox="0 0 24 24"
 					strokeWidth={1.5}
 					stroke="white"
-					className="p-0.50 h-9 w-9 cursor-pointer rounded-md ease-in-out hover:bg-gray-700 sm:hidden"
+					className=""
 				>
 					<path
 						strokeLinecap="round"

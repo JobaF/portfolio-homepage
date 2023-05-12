@@ -136,7 +136,7 @@ export default function Home() {
 										)
 									}
 								}}
-								className="w-full cursor-pointer text-center text-xl"
+								className="w-full cursor-pointer text-center text-xl hover:underline hover:underline-offset-2"
 							>
 								{menuPoint.text}
 							</div>
