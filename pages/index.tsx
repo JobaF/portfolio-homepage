@@ -4,6 +4,7 @@ import Image from "next/image"
 import ArrowTopRightIcon from "./components/icons/ArrowTopRightIcon"
 import BurgerIcon from "./components/icons/BurgerIcon"
 import GithubIcon from "./components/icons/GithubIcon"
+import Credits from "./components/Credits"
 
 type Project = {
 	name: string
@@ -186,6 +187,7 @@ export default function Home() {
 					</div>
 				))}
 			</section>
+			<Credits />
 		</div>
 	)
 }
