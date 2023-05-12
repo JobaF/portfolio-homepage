@@ -17,6 +17,12 @@ type Education = {
 	infos: string[]
 	period: string
 }
+type Work = {
+	institution: string
+	position: string
+	infos: string[]
+	period: string
+}
 
 export default function Home() {
 	const projects: Project[] = [
@@ -60,7 +66,7 @@ export default function Home() {
 			institution: "Universität zu Köln",
 			degree: "Bachelor of Science",
 			infos: [
-				'Bachelor thesis: "Barrieren zur Teilnahmean der Sharing Economy" (1,7)',
+				'Bachelor thesis: "Barrieren zur Teilnahme an der Sharing Economy" (1,7)',
 				"Grade: 2,3",
 			],
 			period: "2014 - 2018",
@@ -70,6 +76,20 @@ export default function Home() {
 			degree: "Abitur",
 			infos: ["Advanced courses: Math, computer science", "Grade: 2,3"],
 			period: "2006 - 2014",
+		},
+	]
+
+	const workExperience: Work[] = [
+		{
+			institution: "ArmedAngels",
+			position: "Working student",
+			infos: [
+				"Automation of data imports",
+				"Support in monthly/annual closing",
+				"Support in accounts receivable",
+				"Posting of marketplaces in ERP",
+			],
+			period: "2019",
 		},
 	]
 
@@ -114,34 +134,57 @@ export default function Home() {
 			<section className="mb-12 mt-20 flex flex-col items-center">
 				<div className="text-3xl underline">My Projects</div>
 				{projects.map((project, i) => (
-					<div className="relative mt-8" key={project.name + i}>
-						<div className=" h-72 w-72 items-start justify-center overflow-hidden rounded-lg">
-							<div className="absolute inset-0  rounded-lg bg-black opacity-70 blur-md"></div>
-							<div
-								className={`${project.tailwindImageTag} relative inset-0 flex h-full w-full items-start justify-between rounded-md bg-cover px-3 pt-2 text-left`}
-							>
-								<span className="text-xl ">{project.name}</span>
-								<ArrowTopRightIcon url={project.projectURL} />
-								<GithubIcon url={project.githubURL} />
-							</div>
+					<div
+						key={project.name + i}
+						className="mt-8 h-72 w-72 items-start justify-center overflow-hidden rounded-lg shadow-lg shadow-black"
+					>
+						<div
+							className={`${project.tailwindImageTag} relative inset-0 flex h-full w-full items-start justify-between rounded-md bg-cover px-3 pt-2 text-left`}
+						>
+							<span className="text-xl ">{project.name}</span>
+							<ArrowTopRightIcon url={project.projectURL} />
+							<GithubIcon url={project.githubURL} />
 						</div>
 					</div>
 				))}
 			</section>
-			<section className="mb-12 mt-20 flex flex-col items-center">
-				<div className="text-3xl underline">Education</div>
-				<div className="mt-8 grid w-full grid-cols-5 justify-items-center">
-					{education.map((item) => (
-						<>
-							<div className="col-span-1 col-start-2 w-full bg-red-500">
-								{item.period}
-							</div>
-							<div className="col-span-2 w-full bg-green-500">
-								{item.period}
-							</div>
-						</>
-					))}
+			<section className="mb-10 mt-10 flex flex-col items-center">
+				<div className="mb-4 text-center text-3xl underline">Education</div>
+				{education.map((item, i) => (
+					<div
+						key={i}
+						className="mt-4 flex w-72 flex-col rounded-lg bg-gray-800 p-6 shadow-md shadow-black"
+					>
+						<div className="text-lg">{item.degree}</div>
+						<div className="text-sm text-gray-400">{item.institution}</div>
+						<div className="text-sm text-gray-400">{item.period}</div>
+						<ul className="flex list-disc flex-col gap-1 pl-3 pt-2 text-sm">
+							{item.infos.map((info, i) => (
+								<li key={item.degree + i}>{info}</li>
+							))}
+						</ul>
+					</div>
+				))}
+			</section>
+			<section className="mb-10 mt-10 flex flex-col items-center">
+				<div className="mb-4 text-center text-3xl underline">
+					Work Experience
 				</div>
+				{workExperience.map((item, i) => (
+					<div
+						key={i}
+						className="mt-4 flex w-72 flex-col rounded-lg bg-gray-800 p-6 shadow-md shadow-black"
+					>
+						<div className="text-xl">{item.position}</div>
+						<div className="text-sm text-gray-400">{item.institution}</div>
+						<div className="text-sm text-gray-400">{item.period}</div>
+						<ul className="flex list-disc flex-col gap-1 pl-3 pt-2 text-sm">
+							{item.infos.map((info, i) => (
+								<li key={item.institution + i}>{info}</li>
+							))}
+						</ul>
+					</div>
+				))}
 			</section>
 		</div>
 	)
