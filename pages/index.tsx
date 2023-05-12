@@ -5,8 +5,21 @@ import ArrowTopRightIcon from "./components/icons/ArrowTopRightIcon"
 import BurgerIcon from "./components/icons/BurgerIcon"
 import GithubIcon from "./components/icons/GithubIcon"
 
+type Project = {
+	name: string
+	projectURL: string
+	githubURL: string
+	tailwindImageTag: string
+}
+type Education = {
+	institution: string
+	degree: string
+	infos: string[]
+	period: string
+}
+
 export default function Home() {
-	const projects = [
+	const projects: Project[] = [
 		{
 			name: "Pomodoro app",
 			projectURL: "https://pomodoro.jabofecht.com",
@@ -32,6 +45,34 @@ export default function Home() {
 			tailwindImageTag: "bg-calculator",
 		},
 	]
+
+	const education: Education[] = [
+		{
+			institution: "Universität zu Köln",
+			degree: "Master of Science",
+			infos: [
+				'Master thesis: "The Impact of Responsiveness on Participant Attraction in Open Source Software" (1,7)',
+				"Grade: 1,7",
+			],
+			period: "2019 - 2023",
+		},
+		{
+			institution: "Universität zu Köln",
+			degree: "Bachelor of Science",
+			infos: [
+				'Bachelor thesis: "Barrieren zur Teilnahmean der Sharing Economy" (1,7)',
+				"Grade: 2,3",
+			],
+			period: "2014 - 2018",
+		},
+		{
+			institution: "Ratsgymnasium Minden",
+			degree: "Abitur",
+			infos: ["Advanced courses: Math, computer science", "Grade: 2,3"],
+			period: "2006 - 2014",
+		},
+	]
+
 	return (
 		<div className="flex flex-col bg-gray-900 font-crimson text-white">
 			<nav className="z-10 flex h-14 items-center justify-between bg-gray-800 px-8">
@@ -72,8 +113,8 @@ export default function Home() {
 
 			<section className="mb-12 mt-20 flex flex-col items-center">
 				<div className="text-3xl underline">My Projects</div>
-				{projects.map((project) => (
-					<div className="relative mt-8">
+				{projects.map((project, i) => (
+					<div className="relative mt-8" key={project.name + i}>
 						<div className=" h-72 w-72 items-start justify-center overflow-hidden rounded-lg">
 							<div className="absolute inset-0  rounded-lg bg-black opacity-70 blur-md"></div>
 							<div
@@ -86,6 +127,21 @@ export default function Home() {
 						</div>
 					</div>
 				))}
+			</section>
+			<section className="mb-12 mt-20 flex flex-col items-center">
+				<div className="text-3xl underline">Education</div>
+				<div className="mt-8 grid w-full grid-cols-5 justify-items-center">
+					{education.map((item) => (
+						<>
+							<div className="col-span-1 col-start-2 w-full bg-red-500">
+								{item.period}
+							</div>
+							<div className="col-span-2 w-full bg-green-500">
+								{item.period}
+							</div>
+						</>
+					))}
+				</div>
 			</section>
 		</div>
 	)
