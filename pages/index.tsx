@@ -121,8 +121,9 @@ export default function Home() {
 			{isMenuOpen && (
 				<>
 					<div className="absolute top-12 z-20 flex h-1/3 w-full flex-col items-center justify-around bg-gray-900 pt-4 opacity-95">
-						{menuPoints.map((menuPoint) => (
+						{menuPoints.map((menuPoint, i) => (
 							<div
+								key={menuPoint.text + i}
 								onClick={() => {
 									setIsMenuOpen(false)
 									if (menuPoint.ref && menuPoint.ref.current) {
@@ -201,7 +202,7 @@ export default function Home() {
 					<div className="mb-4 text-center text-3xl underline">Education</div>
 					{education.map((item, i) => (
 						<div
-							key={i}
+							key={item.degree + i}
 							className="mt-4 flex w-72 flex-col rounded-lg bg-gray-800 p-6 shadow-md shadow-black"
 						>
 							<div className="text-lg">{item.degree}</div>
@@ -224,7 +225,7 @@ export default function Home() {
 					</div>
 					{workExperience.map((item, i) => (
 						<div
-							key={i}
+							key={item.position + i}
 							className="mt-4 flex w-72 flex-col rounded-lg bg-gray-800 p-6 shadow-md shadow-black"
 						>
 							<div className="text-xl">{item.position}</div>
