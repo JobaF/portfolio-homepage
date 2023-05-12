@@ -120,7 +120,7 @@ export default function Home() {
 			</nav>
 			{isMenuOpen && (
 				<>
-					<div className="absolute top-12 z-20 flex h-1/3 w-full flex-col items-center justify-around bg-gray-900 pt-4 opacity-95">
+					<div className="absolute top-14 z-30 flex w-full flex-col items-center justify-center gap-7 bg-gray-900 py-10 shadow-md shadow-black">
 						{menuPoints.map((menuPoint, i) => (
 							<div
 								key={menuPoint.text + i}
