@@ -20,6 +20,7 @@ module.exports = {
 				dictionary: "url(/dictionary.jpg)",
 				clock: "url(/clock.jpg)",
 				calculator: "url(/calculator.jpg)",
+				carRental: "url(/carRental.png)",
 			},
 			keyframes: {
 				fadeIn: {

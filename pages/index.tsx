@@ -8,10 +8,6 @@ import Credits from "./components/Credits"
 import { useRef } from "react"
 import { Variants, motion } from "framer-motion"
 import Navbar from "./components/Navbar"
-import NextJSIcon from "./components/icons/NextJSIcon"
-import TypeScriptIcon from "./components/icons/TypeScriptIcon"
-import TailWindIcon from "./components/icons/tailwindIcon"
-import JSIcon from "./components/icons/JSIcon"
 
 type Project = {
 	name: string
@@ -49,6 +45,12 @@ const cardVariants: Variants = {
 }
 export default function Home() {
 	const projects: Project[] = [
+		{
+			name: "Car rental",
+			projectURL: "https://carrental.jabofecht.com/",
+			githubURL: "https://github.com/JobaF/car-rental",
+			tailwindImageTag: "bg-carRental",
+		},
 		{
 			name: "Pomodoro app",
 			projectURL: "https://pomodoro.jabofecht.com",
@@ -147,12 +149,15 @@ export default function Home() {
 					<div className="flex animate-fade1 flex-col items-center text-center">
 						<h3 className="mt-12 text-4xl">
 							Hi, <br />
-							I&apos;m Jabo Fecht
+							I&apos;m{" "}
+							<span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text font-bold text-transparent">
+								Jabo Fecht
+							</span>
 						</h3>
 
 						<p className="p-4 text-gray-300">
 							Awesome{" "}
-							<span className="border-b-4 border-dotted border-b-blue-500 border-opacity-50">
+							<span className="border-b-2 border-dashed border-b-blue-500 border-opacity-50">
 								react developer
 							</span>{" "}
 							in the making - <br /> headed out on the road to mastery!
@@ -170,7 +175,9 @@ export default function Home() {
 					className="mt-14 flex flex-col items-center justify-center p-5"
 				>
 					<div className="max-w-lg text-justify">
-						<div className="text-center text-3xl underline">About me</div>
+						<h1 className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-center text-4xl font-bold text-transparent">
+							About me
+						</h1>
 						<motion.div
 							variants={cardVariants}
 							initial="offscreen"
@@ -179,9 +186,9 @@ export default function Home() {
 						>
 							<p className="text-md mt-3 text-gray-400">
 								Hello! My name is{" "}
-								<span className="font-bold text-purple-500">Jabo</span> and I'm
-								an ambitious front-end developer who finds joy in bringing ideas
-								to life on the internet. Recently, I completed my Masters in
+								<span className="font-bold underline">Jabo</span> and I'm an
+								ambitious front-end developer who finds joy in bringing ideas to
+								life on the internet. Recently, I completed my Masters in
 								Information Systems, which has equipped me with a strong
 								foundation in the world of technology.
 							</p>
@@ -207,7 +214,9 @@ export default function Home() {
 					className="mb-12 mt-20 flex flex-col items-center"
 					ref={projectRef}
 				>
-					<div className="text-3xl underline">My Projects</div>
+					<h1 className=" bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-center text-4xl font-bold text-transparent">
+						My Projects
+					</h1>
 
 					{projects.map((project, i) => (
 						<motion.div
@@ -219,7 +228,7 @@ export default function Home() {
 						>
 							<div className="mt-8 h-72 w-72 items-start justify-center overflow-hidden rounded-lg shadow-lg shadow-black">
 								<div
-									className={`${project.tailwindImageTag} relative inset-0 flex h-full w-full items-start justify-between rounded-md bg-cover px-3 pt-2 text-left`}
+									className={`${project.tailwindImageTag} relative inset-0 flex h-full w-full items-start justify-between rounded-md bg-contain px-3 pt-2 text-left`}
 								>
 									<span className="text-xl ">{project.name}</span>
 									<ArrowTopRightIcon url={project.projectURL} />
@@ -233,9 +242,9 @@ export default function Home() {
 					className="mb-10 mt-10 flex flex-col items-center"
 					ref={educationRef}
 				>
-					<div className="mb-4 animate-fade1 text-center text-3xl underline">
+					<h1 className="mb-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-center text-4xl font-bold text-transparent">
 						Education
-					</div>
+					</h1>
 					{education.map((item, i) => (
 						<motion.div
 							variants={cardVariants}
@@ -261,9 +270,9 @@ export default function Home() {
 					className="mb-10 mt-10 flex flex-col items-center"
 					ref={workExperienceRef}
 				>
-					<div className="mb-4 text-center text-3xl underline">
+					<h1 className="mb-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-center text-4xl font-bold text-transparent">
 						Work Experience
-					</div>
+					</h1>
 					{workExperience.map((item, i) => (
 						<motion.div
 							variants={cardVariants}
