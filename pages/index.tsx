@@ -146,12 +146,17 @@ export default function Home() {
 					</div>
 					<div className="flex animate-fade1 flex-col items-center text-center">
 						<h3 className="mt-12 text-4xl">
-							Hey, <br />
+							Hi, <br />
 							I&apos;m Jabo Fecht
 						</h3>
 
-						<p className="mt-2 text-gray-400">Frontend Developer</p>
-						<p className="text-gray-400">M. Sc. Information Systems</p>
+						<p className="p-4 text-gray-300">
+							Awesome{" "}
+							<span className="border-b-4 border-dotted border-b-blue-500 border-opacity-50">
+								react developer
+							</span>{" "}
+							in the making - <br /> headed out on the road to mastery!
+						</p>
 						<a
 							href="mailto:hi@jabofecht.com"
 							className="mt-4 flex h-12 w-32 items-center justify-center rounded-xl bg-gradient-to-r from-sky-500 to-indigo-500 drop-shadow-xl hover:bg-gradient-to-r hover:from-sky-800 hover:to-indigo-800 hover:shadow-inner hover:shadow-black"
@@ -172,7 +177,7 @@ export default function Home() {
 							whileInView="onscreen"
 							viewport={{ once: true }}
 						>
-							<p className="mt-4 text-lg text-gray-400">
+							<p className="text-md mt-3 text-gray-400">
 								Hello! My name is{" "}
 								<span className="font-bold text-purple-500">Jabo</span> and I'm
 								an ambitious front-end developer who finds joy in bringing ideas
@@ -180,13 +185,13 @@ export default function Home() {
 								Information Systems, which has equipped me with a strong
 								foundation in the world of technology.
 							</p>
-							<p className="mt-2 text-lg text-gray-400">
+							<p className="text-md mt-2 text-gray-400">
 								I'm proficient in a diverse range of tools and languages
 								including TypeScript, JavaScript, Tailwind CSS, ReactJS,
 								Next.js, CSS, and HTML.
 							</p>
 
-							<p className="mt-2 text-lg text-gray-400">
+							<p className="text-md mt-2 text-gray-400">
 								I strive to create visually stunning and seamlessly functional
 								web experiences. With a deep passion for clean code and
 								user-centric design, I am dedicated to crafting engaging and
