@@ -124,7 +124,7 @@ export default function Home() {
 	const homeRef = useRef<null | HTMLElement>(null)
 
 	return (
-		<div className="flex flex-col bg-gray-900 text-white">
+		<div className="flex flex-col overflow-hidden bg-gray-900 text-white">
 			<Navbar
 				workExperienceRef={workExperienceRef}
 				projectRef={projectRef}
