@@ -133,7 +133,7 @@ export default function Home() {
 				aboutMeRef={aboutMeRef}
 			/>
 			<>
-				<section id="home" ref={homeRef} className="flex min-h-screen flex-col">
+				<section id="home" ref={homeRef} className="flex flex-col">
 					{/* Avatar with effect */}
 					<div className="mt-14 flex animate-fade1 flex-col items-center justify-center">
 						<div className="absolute aspect-square h-72 rounded-full bg-gradient-to-r from-sky-600 to-indigo-600 opacity-60 blur-xl"></div>
@@ -172,7 +172,7 @@ export default function Home() {
 				</section>
 				<section
 					ref={aboutMeRef}
-					className="mt-14 flex min-h-screen flex-col items-center justify-center p-7"
+					className="mt-20 flex flex-col items-center justify-center p-7"
 				>
 					<div className="max-w-lg text-justify">
 						<h1 className="my-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-center text-4xl font-bold text-transparent">
