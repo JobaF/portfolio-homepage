@@ -172,10 +172,10 @@ export default function Home() {
 				</section>
 				<section
 					ref={aboutMeRef}
-					className="mt-14 flex flex-col items-center justify-center p-5"
+					className="mt-14 flex min-h-screen flex-col items-center justify-center p-7"
 				>
 					<div className="max-w-lg text-justify">
-						<h1 className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-center text-4xl font-bold text-transparent">
+						<h1 className="my-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-center text-4xl font-bold text-transparent">
 							About me
 						</h1>
 						<motion.div
