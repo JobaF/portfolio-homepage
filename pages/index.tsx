@@ -6,6 +6,7 @@ import BurgerIcon from "./components/icons/BurgerIcon"
 import GithubIcon from "./components/icons/GithubIcon"
 import Credits from "./components/Credits"
 import { useRef, useState } from "react"
+import { Variants, motion } from "framer-motion"
 
 type Project = {
 	name: string
@@ -25,7 +26,19 @@ type Work = {
 	infos: string[]
 	period: string
 }
-
+const cardVariants: Variants = {
+	offscreen: {
+		y: 100,
+	},
+	onscreen: {
+		y: 0,
+		transition: {
+			type: "spring",
+			duration: 0.8,
+			bounce: 0.5,
+		},
+	},
+}
 export default function Home() {
 	const projects: Project[] = [
 		{
@@ -120,7 +133,7 @@ export default function Home() {
 			</nav>
 			{isMenuOpen && (
 				<>
-					<div className="absolute top-14 z-30 flex w-full flex-col items-center justify-center gap-7 bg-gray-900 py-10 shadow-md shadow-black">
+					<div className="absolute top-14 z-30 flex w-full  flex-col items-center justify-center gap-7 bg-gray-900 py-10 shadow-md shadow-black">
 						{menuPoints.map((menuPoint, i) => (
 							<div
 								key={menuPoint.text + i}
@@ -145,7 +158,7 @@ export default function Home() {
 				</>
 			)}
 			<>
-				<section id="home" ref={homeRef}>
+				<section id="home" ref={homeRef} className="">
 					<div className="mt-14 flex flex-col items-center justify-center">
 						<div className="absolute aspect-square h-72 rounded-full bg-gradient-to-r from-sky-600 to-indigo-600 opacity-60 blur-xl"></div>
 						<div className="relative aspect-square h-60">
@@ -157,11 +170,12 @@ export default function Home() {
 							/>
 						</div>
 					</div>
-					<div className="text-center">
+					<div className="animate-fade1 text-center">
 						<h3 className="mt-12 text-4xl">
 							Hey, <br />
 							I&apos;m Jabo Fecht
 						</h3>
+
 						<p className="mt-2 text-gray-400">Frontend Developer</p>
 						<p className="text-gray-400">M. Sc. Information Systems</p>
 						<a
@@ -180,19 +194,25 @@ export default function Home() {
 					ref={projectRef}
 				>
 					<div className="text-3xl underline">My Projects</div>
+
 					{projects.map((project, i) => (
-						<div
+						<motion.div
+							variants={cardVariants}
 							key={project.name + i}
-							className="mt-8 h-72 w-72 items-start justify-center overflow-hidden rounded-lg shadow-lg shadow-black"
+							initial="offscreen"
+							whileInView="onscreen"
+							viewport={{ once: true }}
 						>
-							<div
-								className={`${project.tailwindImageTag} relative inset-0 flex h-full w-full items-start justify-between rounded-md bg-cover px-3 pt-2 text-left`}
-							>
-								<span className="text-xl ">{project.name}</span>
-								<ArrowTopRightIcon url={project.projectURL} />
-								<GithubIcon url={project.githubURL} />
+							<div className="mt-8 h-72 w-72 items-start justify-center overflow-hidden rounded-lg shadow-lg shadow-black">
+								<div
+									className={`${project.tailwindImageTag} relative inset-0 flex h-full w-full items-start justify-between rounded-md bg-cover px-3 pt-2 text-left`}
+								>
+									<span className="text-xl ">{project.name}</span>
+									<ArrowTopRightIcon url={project.projectURL} />
+									<GithubIcon url={project.githubURL} />
+								</div>
 							</div>
-						</div>
+						</motion.div>
 					))}
 				</section>
 				<section
@@ -201,19 +221,24 @@ export default function Home() {
 				>
 					<div className="mb-4 text-center text-3xl underline">Education</div>
 					{education.map((item, i) => (
-						<div
+						<motion.div
+							variants={cardVariants}
 							key={item.degree + i}
-							className="mt-4 flex w-72 flex-col rounded-lg bg-gray-800 p-6 shadow-md shadow-black"
+							initial="offscreen"
+							whileInView="onscreen"
+							viewport={{ once: true }}
 						>
-							<div className="text-lg">{item.degree}</div>
-							<div className="text-sm text-gray-400">{item.institution}</div>
-							<div className="text-sm text-gray-400">{item.period}</div>
-							<ul className="flex list-disc flex-col gap-1 pl-3 pt-2 text-sm">
-								{item.infos.map((info, i) => (
-									<li key={item.degree + i}>{info}</li>
-								))}
-							</ul>
-						</div>
+							<div className="mt-4 flex w-72 flex-col rounded-lg bg-gray-800 p-6 shadow-md shadow-black">
+								<div className="text-lg">{item.degree}</div>
+								<div className="text-sm text-gray-400">{item.institution}</div>
+								<div className="text-sm text-gray-400">{item.period}</div>
+								<ul className="flex list-disc flex-col gap-1 pl-3 pt-2 text-sm">
+									{item.infos.map((info, i) => (
+										<li key={item.degree + i}>{info}</li>
+									))}
+								</ul>
+							</div>
+						</motion.div>
 					))}
 				</section>
 				<section
@@ -224,19 +249,24 @@ export default function Home() {
 						Work Experience
 					</div>
 					{workExperience.map((item, i) => (
-						<div
+						<motion.div
+							variants={cardVariants}
 							key={item.position + i}
-							className="mt-4 flex w-72 flex-col rounded-lg bg-gray-800 p-6 shadow-md shadow-black"
+							initial="offscreen"
+							whileInView="onscreen"
+							viewport={{ once: true }}
 						>
-							<div className="text-xl">{item.position}</div>
-							<div className="text-sm text-gray-400">{item.institution}</div>
-							<div className="text-sm text-gray-400">{item.period}</div>
-							<ul className="flex list-disc flex-col gap-1 pl-3 pt-2 text-sm">
-								{item.infos.map((info, i) => (
-									<li key={item.institution + i}>{info}</li>
-								))}
-							</ul>
-						</div>
+							<div className="mt-4 flex w-72 flex-col rounded-lg bg-gray-800 p-6 shadow-md shadow-black">
+								<div className="text-xl">{item.position}</div>
+								<div className="text-sm text-gray-400">{item.institution}</div>
+								<div className="text-sm text-gray-400">{item.period}</div>
+								<ul className="flex list-disc flex-col gap-1 pl-3 pt-2 text-sm">
+									{item.infos.map((info, i) => (
+										<li key={item.institution + i}>{info}</li>
+									))}
+								</ul>
+							</div>
+						</motion.div>
 					))}
 				</section>
 				<Credits />

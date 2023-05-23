@@ -22,14 +22,13 @@ module.exports = {
 				calculator: "url(/calculator.jpg)",
 			},
 			keyframes: {
-				"open-menu": {
-					"0%": { transform: "scaleY(0)" },
-					"80%": { transform: "scaleY(1.2)" },
-					"100%": { transform: "scaleY(1)" },
+				fadeIn: {
+					"0%": { opacity: "0", transform: "translate(0px,50px)" },
+					"100%": { opacity: "1" },
 				},
 			},
 			animation: {
-				"open-menu": "open-menu 0.5s ease-in-out forwards",
+				fade1: "fadeIn 0.5s ease-in-out",
 			},
 		},
 	},
