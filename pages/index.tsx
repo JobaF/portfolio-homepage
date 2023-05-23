@@ -2,11 +2,16 @@
 
 import Image from "next/image"
 import ArrowTopRightIcon from "./components/icons/ArrowTopRightIcon"
-import BurgerIcon from "./components/icons/BurgerIcon"
+
 import GithubIcon from "./components/icons/GithubIcon"
 import Credits from "./components/Credits"
-import { useRef, useState } from "react"
+import { useRef } from "react"
 import { Variants, motion } from "framer-motion"
+import Navbar from "./components/Navbar"
+import NextJSIcon from "./components/icons/NextJSIcon"
+import TypeScriptIcon from "./components/icons/TypeScriptIcon"
+import TailWindIcon from "./components/icons/tailwindIcon"
+import JSIcon from "./components/icons/JSIcon"
 
 type Project = {
 	name: string
@@ -28,13 +33,16 @@ type Work = {
 }
 const cardVariants: Variants = {
 	offscreen: {
-		y: 100,
+		x: 100,
+		opacity: 0,
 	},
 	onscreen: {
-		y: 0,
+		x: 0,
+		opacity: 1,
 		transition: {
+			delay: 0.3,
 			type: "spring",
-			duration: 0.8,
+			duration: 0.5,
 			bounce: 0.5,
 		},
 	},
@@ -107,59 +115,25 @@ export default function Home() {
 			period: "2019",
 		},
 	]
-
-	const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
 	const workExperienceRef = useRef<null | HTMLElement>(null)
 	const projectRef = useRef<null | HTMLElement>(null)
 	const educationRef = useRef<null | HTMLElement>(null)
+	const aboutMeRef = useRef<null | HTMLElement>(null)
 	const homeRef = useRef<null | HTMLElement>(null)
-	const menuPoints = [
-		{ text: "Home", ref: homeRef },
-		{ text: "Projects", ref: projectRef },
-		{ text: "Education", ref: educationRef },
-		{ text: "Work experience", ref: workExperienceRef },
-	]
 
 	return (
-		<div className="flex flex-col bg-gray-900 font-crimson text-white">
-			<nav className="z-30 flex h-14 items-center justify-between bg-gray-800 px-8">
-				<p className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border p-1 text-lg hover:bg-gray-700">
-					JF
-				</p>
-				<BurgerIcon
-					onClickFunction={() => setIsMenuOpen((prev) => !prev)}
-					isMenuOpen={isMenuOpen}
-				/>
-			</nav>
-			{isMenuOpen && (
-				<>
-					<div className="absolute top-14 z-30 flex w-full  flex-col items-center justify-center gap-7 bg-gray-900 py-10 shadow-md shadow-black">
-						{menuPoints.map((menuPoint, i) => (
-							<div
-								key={menuPoint.text + i}
-								onClick={() => {
-									setIsMenuOpen(false)
-									if (menuPoint.ref && menuPoint.ref.current) {
-										setTimeout(
-											() =>
-												menuPoint.ref.current!.scrollIntoView({
-													behavior: "smooth",
-												}),
-											200
-										)
-									}
-								}}
-								className="w-full cursor-pointer text-center text-xl hover:underline hover:underline-offset-2"
-							>
-								{menuPoint.text}
-							</div>
-						))}
-					</div>
-				</>
-			)}
+		<div className="flex flex-col bg-gray-900 text-white">
+			<Navbar
+				workExperienceRef={workExperienceRef}
+				projectRef={projectRef}
+				educationRef={educationRef}
+				homeRef={homeRef}
+				aboutMeRef={aboutMeRef}
+			/>
 			<>
-				<section id="home" ref={homeRef} className="">
-					<div className="mt-14 flex flex-col items-center justify-center">
+				<section id="home" ref={homeRef} className="flex min-h-screen flex-col">
+					{/* Avatar with effect */}
+					<div className="mt-14 flex animate-fade1 flex-col items-center justify-center">
 						<div className="absolute aspect-square h-72 rounded-full bg-gradient-to-r from-sky-600 to-indigo-600 opacity-60 blur-xl"></div>
 						<div className="relative aspect-square h-60">
 							<Image
@@ -170,7 +144,7 @@ export default function Home() {
 							/>
 						</div>
 					</div>
-					<div className="animate-fade1 text-center">
+					<div className="flex animate-fade1 flex-col items-center text-center">
 						<h3 className="mt-12 text-4xl">
 							Hey, <br />
 							I&apos;m Jabo Fecht
@@ -180,12 +154,47 @@ export default function Home() {
 						<p className="text-gray-400">M. Sc. Information Systems</p>
 						<a
 							href="mailto:hi@jabofecht.com"
-							className="mt-4 flex items-center justify-center"
+							className="mt-4 flex h-12 w-32 items-center justify-center rounded-xl bg-gradient-to-r from-sky-500 to-indigo-500 drop-shadow-xl hover:bg-gradient-to-r hover:from-sky-800 hover:to-indigo-800 hover:shadow-inner hover:shadow-black"
 						>
-							<div className="flex h-12 w-32 items-center justify-center rounded-xl bg-gradient-to-r from-sky-500 to-indigo-500 drop-shadow-xl hover:bg-gradient-to-r hover:from-sky-800 hover:to-indigo-800 hover:shadow-inner hover:shadow-black">
-								Contact me
-							</div>
+							Contact me
 						</a>
+					</div>
+				</section>
+				<section
+					ref={aboutMeRef}
+					className="mt-14 flex flex-col items-center justify-center p-5"
+				>
+					<div className="max-w-lg text-justify">
+						<div className="text-center text-3xl underline">About me</div>
+						<motion.div
+							variants={cardVariants}
+							initial="offscreen"
+							whileInView="onscreen"
+							viewport={{ once: true }}
+						>
+							<p className="mt-4 text-lg text-gray-400">
+								Hello! My name is{" "}
+								<span className="font-bold text-purple-500">Jabo</span> and I'm
+								an ambitious front-end developer who finds joy in bringing ideas
+								to life on the internet. Recently, I completed my Masters in
+								Information Systems, which has equipped me with a strong
+								foundation in the world of technology.
+							</p>
+							<p className="mt-2 text-lg text-gray-400">
+								I'm proficient in a diverse range of tools and languages
+								including TypeScript, JavaScript, Tailwind CSS, ReactJS,
+								Next.js, CSS, and HTML.
+							</p>
+
+							<p className="mt-2 text-lg text-gray-400">
+								I strive to create visually stunning and seamlessly functional
+								web experiences. With a deep passion for clean code and
+								user-centric design, I am dedicated to crafting engaging and
+								intuitive interfaces that leave a lasting impact. Join me on
+								this exciting journey as we transform concepts into captivating
+								digital realities.
+							</p>
+						</motion.div>
 					</div>
 				</section>
 
@@ -219,7 +228,9 @@ export default function Home() {
 					className="mb-10 mt-10 flex flex-col items-center"
 					ref={educationRef}
 				>
-					<div className="mb-4 text-center text-3xl underline">Education</div>
+					<div className="mb-4 animate-fade1 text-center text-3xl underline">
+						Education
+					</div>
 					{education.map((item, i) => (
 						<motion.div
 							variants={cardVariants}
