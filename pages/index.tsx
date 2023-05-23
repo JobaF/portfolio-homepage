@@ -186,14 +186,14 @@ export default function Home() {
 						>
 							<p className="text-md mt-3 text-gray-400">
 								Hello! My name is{" "}
-								<span className="font-bold underline">Jabo</span> and I'm an
-								ambitious front-end developer who finds joy in bringing ideas to
-								life on the internet. Recently, I completed my Masters in
+								<span className="font-bold underline">Jabo</span> and I&apos;m
+								an ambitious front-end developer who finds joy in bringing ideas
+								to life on the internet. Recently, I completed my Masters in
 								Information Systems, which has equipped me with a strong
 								foundation in the world of technology.
 							</p>
 							<p className="text-md mt-2 text-gray-400">
-								I'm proficient in a diverse range of tools and languages
+								I&apos;m proficient in a diverse range of tools and languages
 								including TypeScript, JavaScript, Tailwind CSS, ReactJS,
 								Next.js, CSS, and HTML.
 							</p>
