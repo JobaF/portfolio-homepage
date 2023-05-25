@@ -50,35 +50,35 @@ export default function Home() {
 			projectURL: "https://carrental.jabofecht.com/",
 			githubURL: "https://github.com/JobaF/car-rental",
 			tailwindImageTag: "bg-carRental",
-			pageURL: "/car-rental",
+			pageURL: "/projects/carrental",
 		},
 		{
 			name: "Pomodoro app",
 			projectURL: "https://pomodoro.jabofecht.com",
 			githubURL: "https://github.com/JobaF/pomodoro-app",
 			tailwindImageTag: "bg-pomodoro",
-			pageURL: "/pomodoro",
+			pageURL: "/projects/pomodoro",
 		},
 		{
 			name: "Dictionary app",
 			projectURL: "https://dictionary.jabofecht.com/dictionary/keyboard",
 			githubURL: "https://github.com/JobaF/dictionary-app",
 			tailwindImageTag: "bg-dictionary",
-			pageURL: "/dictionary",
+			pageURL: "/projects/dictionary",
 		},
 		{
 			name: "Age calculator",
 			projectURL: "https://datecalculator.jabofecht.com/",
 			githubURL: "https://github.com/JobaF/frontendmentor-age-calculator",
 			tailwindImageTag: "bg-clock",
-			pageURL: "/age-calculator",
+			pageURL: "/projects/agecalculator",
 		},
 		{
 			name: "Apple-style calculator",
 			projectURL: "https://jobaf.github.io/odin-calculator/",
 			githubURL: "https://github.com/JobaF/odin-calculator",
 			tailwindImageTag: "bg-calculator",
-			pageURL: "/apple-calculator",
+			pageURL: "/projects/applecalculator",
 		},
 	]
 
@@ -125,7 +125,6 @@ export default function Home() {
 
 	return (
 		<div className="flex flex-col overflow-hidden bg-gray-900 text-white">
-			<Navbar />
 			<>
 				<section id="home" className="flex flex-col">
 					{/* Avatar with effect */}
@@ -296,7 +295,6 @@ export default function Home() {
 						</motion.div>
 					))}
 				</section>
-				<Credits />
 			</>
 		</div>
 	)

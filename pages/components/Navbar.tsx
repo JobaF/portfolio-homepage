@@ -19,6 +19,9 @@ const Navbar: FC<NavbarProps> = ({}) => {
 			<nav className="z-30 flex h-14 items-center justify-between bg-gray-800 px-8 text-white">
 				<Link
 					href="/"
+					onClick={() => {
+						if (isMenuOpen) setIsMenuOpen(false)
+					}}
 					className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border p-1 text-lg hover:bg-gray-700"
 				>
 					JF
