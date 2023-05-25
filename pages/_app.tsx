@@ -6,7 +6,7 @@ import Credits from "./components/Credits"
 const inter = Inter({ subsets: ["latin"] })
 export default function App({ Component, pageProps }: AppProps) {
 	return (
-		<main className={inter.className}>
+		<main className={inter.className + " bg-gray-900 text-white"}>
 			<Navbar />
 			<Component {...pageProps} />
 			<Credits />
