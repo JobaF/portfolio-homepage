@@ -1,4 +1,4 @@
-import { cardVariants, education } from "@/utils/constants"
+import { cardVariants, education } from "@/utils/values"
 import { motion } from "framer-motion"
 import { FC } from "react"
 

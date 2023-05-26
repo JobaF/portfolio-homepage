@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import { FC } from "react"
-import { cardVariants } from "../../../utils/constants"
+import { cardVariants } from "../../../utils/values"
 interface AboutMeSectionProps {}
 
 const AboutMeSection: FC<AboutMeSectionProps> = ({}) => {
@@ -18,8 +18,9 @@ const AboutMeSection: FC<AboutMeSectionProps> = ({}) => {
 					initial="offscreen"
 					whileInView="onscreen"
 					viewport={{ once: true }}
+					className="lg:text-xl"
 				>
-					<p className="text-md mt-3 text-gray-400">
+					<p className="text-md mt-3 text-gray-400 ">
 						Hello! My name is <span className="font-bold underline">Jabo</span>{" "}
 						and I&apos;m an ambitious front-end developer who finds joy in
 						bringing ideas to life on the internet. Recently, I completed my

@@ -7,14 +7,10 @@ interface GithubIconProps {
 	hoverColor?: string
 }
 
-const GithubIcon: FC<GithubIconProps> = ({
-	url,
-	color = "white",
-	hoverColor = "hover:stroke-black",
-}) => {
+const GithubIcon: FC<GithubIconProps> = ({ url }) => {
 	return (
-		<a href={url} target="_blank" className="">
-			<GoMarkGithub className="absolute bottom-2 right-10 h-6 w-6 rounded-full hover:fill-black" />
+		<a href={url} target="_blank">
+			<GoMarkGithub className="h-6 w-6 rounded-full hover:fill-black" />
 		</a>
 	)
 }

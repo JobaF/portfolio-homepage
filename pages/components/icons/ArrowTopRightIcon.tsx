@@ -6,11 +6,7 @@ interface ArrowTopRightIconProps {
 	hoverColor?: string
 }
 
-const ArrowTopRightIcon: FC<ArrowTopRightIconProps> = ({
-	url,
-	color = "white",
-	hoverColor = "hover:stroke-black",
-}) => {
+const ArrowTopRightIcon: FC<ArrowTopRightIconProps> = ({ url }) => {
 	return (
 		<a href={url} target="_blank">
 			<svg
@@ -18,8 +14,8 @@ const ArrowTopRightIcon: FC<ArrowTopRightIconProps> = ({
 				fill="none"
 				viewBox="0 0 24 24"
 				strokeWidth={2}
-				stroke={color}
-				className={`absolute bottom-2 right-2 h-6 w-6 ${hoverColor}`}
+				stroke="white"
+				className="h-6 w-6 group-hover:stroke-black"
 			>
 				<path
 					strokeLinecap="round"

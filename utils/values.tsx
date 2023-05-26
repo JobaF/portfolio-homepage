@@ -25,6 +25,8 @@ export const projects: Project[] = [
 		tailwindImageTag: "bg-carRental",
 		pageURL: "/projects/carrental",
 		imageURL: "/carRental.png",
+		description:
+			"Responsive demo website that showcases a car rental page including a hero section, car picker, FAQ, team presentation and much more. ",
 	},
 	{
 		name: "Pomodoro app",
@@ -33,6 +35,8 @@ export const projects: Project[] = [
 		tailwindImageTag: "bg-pomodoro",
 		pageURL: "/projects/pomodoro",
 		imageURL: "/pomodoro.jpg",
+		description:
+			"Responsive demo website that showcases a car rental page including a hero section, car picker, FAQ, team presentation and much more. ",
 	},
 	{
 		name: "Dictionary app",
@@ -41,6 +45,8 @@ export const projects: Project[] = [
 		tailwindImageTag: "bg-dictionary",
 		pageURL: "/projects/dictionary",
 		imageURL: "/dictionary.jpg",
+		description:
+			"Responsive demo website that showcases a car rental page including a hero section, car picker, FAQ, team presentation and much more. ",
 	},
 	{
 		name: "Age calculator",
@@ -49,6 +55,8 @@ export const projects: Project[] = [
 		tailwindImageTag: "bg-clock",
 		pageURL: "/projects/agecalculator",
 		imageURL: "/clock.jpg",
+		description:
+			"Responsive demo website that showcases a car rental page including a hero section, car picker, FAQ, team presentation and much more. ",
 	},
 	{
 		name: "Apple-style calculator",
@@ -57,6 +65,8 @@ export const projects: Project[] = [
 		tailwindImageTag: "bg-calculator",
 		pageURL: "/projects/applecalculator",
 		imageURL: "/calculator.jpg",
+		description:
+			"Responsive demo website that showcases a car rental page including a hero section, car picker, FAQ, team presentation and much more. ",
 	},
 ]
 

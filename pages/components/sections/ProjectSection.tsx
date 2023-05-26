@@ -4,7 +4,7 @@ import { FC } from "react"
 import Image from "next/image"
 import ArrowTopRightIcon from "../icons/ArrowTopRightIcon"
 import GithubIcon from "../icons/GithubIcon"
-import { HOSTNAME_CDN, cardVariants, projects } from "@/utils/constants"
+import { HOSTNAME_CDN, cardVariants, projects } from "@/utils/values"
 
 interface ProjectSectionProps {}
 
@@ -23,25 +23,37 @@ const ProjectSection: FC<ProjectSectionProps> = ({}) => {
 				{projects.map((project, i) => (
 					<div
 						key={project.name + i}
-						className="mt-8 overflow-hidden rounded-lg shadow-lg shadow-black"
+						className="mx-3 mt-8 flex max-w-md flex-col items-center overflow-hidden rounded-lg shadow-lg shadow-black"
 					>
-						<div className="aspect-square ">
-							<Image
-								src={HOSTNAME_CDN + project.imageURL}
-								alt={"image " + project.name}
-								width={300}
-								height={300}
-								className="rounded-lg"
-							/>
-						</div>
 						<Link
-							className="text-center text-2xl font-bold hover:text-gray-400"
-							href={project.pageURL}
+							className="mt-3 text-center text-2xl font-bold hover:text-gray-500 hover:opacity-50"
+							href={project.projectURL}
+							target="_blank"
 						>
 							{project.name}
+
+							<div className="p-2">
+								<Image
+									src="/mockup-carrental-macbook.jpg"
+									width={400}
+									height={400}
+									alt="mockup"
+								/>
+							</div>
 						</Link>
-						{/* <ArrowTopRightIcon url={project.projectURL} />
-							<GithubIcon url={project.githubURL} /> */}
+						<p className="px-5 py-2 text-justify text-gray-400">
+							{project.description}
+						</p>
+						<div className="flex w-full justify-between gap-5 px-5 ">
+							<button className="group mb-3 flex h-8 w-1/2 items-center justify-center gap-2 rounded-md bg-gray-500 px-4 shadow-md shadow-black hover:text-black">
+								<p>Visit Page</p>
+								<ArrowTopRightIcon url={project.projectURL} />
+							</button>
+							<button className="mb-3 flex h-8 w-1/2 items-center justify-center gap-2 rounded-md bg-gray-500 px-4  shadow-md shadow-black hover:text-black">
+								<p>Visit Code</p>
+								<GithubIcon url={project.githubURL} />{" "}
+							</button>
+						</div>
 					</div>
 				))}
 			</motion.div>

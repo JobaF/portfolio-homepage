@@ -18,7 +18,7 @@ const HomeSection: FC<HomeSectionProps> = ({}) => {
 				</div>
 			</div>
 			<div className="flex animate-fade1 flex-col items-center text-center">
-				<h3 className="mt-12 text-4xl">
+				<h3 className="mt-12 text-4xl lg:text-5xl">
 					Hi, <br />
 					I&apos;m{" "}
 					<span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text font-bold text-transparent">
@@ -26,7 +26,7 @@ const HomeSection: FC<HomeSectionProps> = ({}) => {
 					</span>
 				</h3>
 
-				<p className="p-4 text-gray-300">
+				<p className="p-4 text-gray-300 lg:text-xl">
 					Awesome{" "}
 					<span className="border-b-[3px] border-dotted border-b-purple-500 border-opacity-50">
 						react developer
@@ -35,7 +35,7 @@ const HomeSection: FC<HomeSectionProps> = ({}) => {
 				</p>
 				<a
 					href="mailto:hi@jabofecht.com"
-					className="mt-4 flex h-12 w-32 items-center justify-center rounded-xl bg-gradient-to-r from-sky-500 to-indigo-500 drop-shadow-xl hover:bg-gradient-to-r hover:from-sky-800 hover:to-indigo-800 hover:shadow-inner hover:shadow-black"
+					className="mt-4 flex h-12 w-32 items-center justify-center rounded-xl bg-gradient-to-r from-sky-500 to-indigo-500 p-2 drop-shadow-xl hover:bg-gradient-to-r hover:from-sky-800 hover:to-indigo-800 hover:shadow-inner hover:shadow-black lg:text-xl"
 				>
 					Contact me
 				</a>
