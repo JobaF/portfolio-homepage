@@ -26,7 +26,7 @@ const ProjectSection: FC<ProjectSectionProps> = ({}) => {
 						className="mx-3 mt-8 flex max-w-md flex-col items-center overflow-hidden rounded-lg shadow-lg shadow-black"
 					>
 						<Link
-							className="mt-3 text-center text-2xl font-bold hover:text-gray-500 hover:opacity-50"
+							className="mt-3 text-center text-2xl font-bold hover:text-gray-500 hover:opacity-30"
 							href={project.projectURL}
 							target="_blank"
 						>
@@ -45,14 +45,22 @@ const ProjectSection: FC<ProjectSectionProps> = ({}) => {
 							{project.description}
 						</p>
 						<div className="flex w-full justify-between gap-5 px-5 ">
-							<button className="group mb-3 flex h-8 w-1/2 items-center justify-center gap-2 rounded-md bg-gray-500 px-4 shadow-md shadow-black hover:text-black">
+							<Link
+								href={project.projectURL}
+								target="_blank"
+								className="group mb-3 flex h-8 w-1/2 items-center justify-center gap-2 rounded-md bg-gray-500 px-4 shadow-md shadow-black hover:bg-gray-900"
+							>
 								<p>Visit Page</p>
-								<ArrowTopRightIcon url={project.projectURL} />
-							</button>
-							<button className="mb-3 flex h-8 w-1/2 items-center justify-center gap-2 rounded-md bg-gray-500 px-4  shadow-md shadow-black hover:text-black">
+								<ArrowTopRightIcon />
+							</Link>
+							<Link
+								href={project.githubURL}
+								target="_blank"
+								className="mb-3 flex h-8 w-1/2 items-center justify-center gap-2 rounded-md bg-gray-500 px-4  shadow-md shadow-black hover:bg-gray-900"
+							>
 								<p>Visit Code</p>
-								<GithubIcon url={project.githubURL} />{" "}
-							</button>
+								<GithubIcon />
+							</Link>
 						</div>
 					</div>
 				))}
