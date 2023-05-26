@@ -2,7 +2,6 @@ export type Project = {
 	name: string
 	projectURL: string
 	githubURL: string
-	tailwindImageTag: string
 	pageURL: string
 	imageURL: string
 	description: string

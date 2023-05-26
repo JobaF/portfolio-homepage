@@ -1,5 +1,6 @@
 import { FC } from "react"
 import Image from "next/image"
+import { HOSTNAME_CDN } from "@/utils/values"
 interface HomeSectionProps {}
 
 const HomeSection: FC<HomeSectionProps> = ({}) => {
@@ -10,7 +11,7 @@ const HomeSection: FC<HomeSectionProps> = ({}) => {
 				<div className="absolute aspect-square h-72 rounded-full bg-gradient-to-r from-sky-600 to-indigo-600 opacity-60 blur-xl"></div>
 				<div className="relative aspect-square h-60">
 					<Image
-						src={"https://d13m1rqoos03v0.cloudfront.net/portraitlogo.png"}
+						src={HOSTNAME_CDN + "/portraitlogo.png"}
 						alt="Avatar"
 						fill={true}
 						loading="eager"

@@ -18,7 +18,7 @@ const WorkExperienceSection: FC<WorkExperienceSectionProps> = ({}) => {
 					whileInView="onscreen"
 					viewport={{ once: true }}
 				>
-					<div className="mt-4 flex w-72 flex-col rounded-lg bg-gray-800 p-6 shadow-md shadow-black">
+					<div className="mt-4 flex w-80 flex-col rounded-lg bg-gray-900 p-6 text-justify shadow-md shadow-black">
 						<div className="text-xl">{item.position}</div>
 						<div className="text-sm text-gray-400">{item.institution}</div>
 						<div className="text-sm text-gray-400">{item.period}</div>

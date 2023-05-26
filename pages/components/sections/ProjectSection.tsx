@@ -23,7 +23,7 @@ const ProjectSection: FC<ProjectSectionProps> = ({}) => {
 				{projects.map((project, i) => (
 					<div
 						key={project.name + i}
-						className="mx-3 mt-8 flex max-w-md flex-col items-center overflow-hidden rounded-lg shadow-lg shadow-black"
+						className="mx-5 mt-8 flex w-80 max-w-md flex-col items-center overflow-hidden rounded-lg px-5 shadow-md shadow-black"
 					>
 						<Link
 							className="mt-3 text-center text-2xl font-bold hover:text-gray-500 hover:opacity-30"
@@ -34,23 +34,23 @@ const ProjectSection: FC<ProjectSectionProps> = ({}) => {
 
 							<div className="p-2">
 								<Image
-									src="/mockup-carrental-macbook.jpg"
+									src={HOSTNAME_CDN + project.imageURL}
 									width={400}
 									height={400}
-									alt="mockup"
+									alt={"mockup " + project.name}
 								/>
 							</div>
 						</Link>
-						<p className="px-5 py-2 text-justify text-gray-400">
+						<p className="mb-3 py-2 text-justify text-gray-400">
 							{project.description}
 						</p>
-						<div className="flex w-full justify-between gap-5 px-5 ">
+						<div className="flex w-full justify-between gap-5 ">
 							<Link
 								href={project.projectURL}
 								target="_blank"
-								className="group mb-3 flex h-8 w-1/2 items-center justify-center gap-2 rounded-md bg-gray-500 px-4 shadow-md shadow-black hover:bg-gray-900"
+								className="mb-3 flex h-8 w-1/2 items-center justify-center gap-2 rounded-md bg-gray-500 px-4  shadow-md shadow-black hover:bg-gray-900"
 							>
-								<p>Visit Page</p>
+								<p>Demo</p>
 								<ArrowTopRightIcon />
 							</Link>
 							<Link
@@ -58,7 +58,7 @@ const ProjectSection: FC<ProjectSectionProps> = ({}) => {
 								target="_blank"
 								className="mb-3 flex h-8 w-1/2 items-center justify-center gap-2 rounded-md bg-gray-500 px-4  shadow-md shadow-black hover:bg-gray-900"
 							>
-								<p>Visit Code</p>
+								<p>Code</p>
 								<GithubIcon />
 							</Link>
 						</div>

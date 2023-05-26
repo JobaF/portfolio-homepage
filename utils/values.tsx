@@ -22,19 +22,8 @@ export const projects: Project[] = [
 		name: "Car rental",
 		projectURL: "https://carrental.jabofecht.com/",
 		githubURL: "https://github.com/JobaF/car-rental",
-		tailwindImageTag: "bg-carRental",
 		pageURL: "/projects/carrental",
-		imageURL: "/carRental.png",
-		description:
-			"Responsive demo website that showcases a car rental page including a hero section, car picker, FAQ, team presentation and much more. ",
-	},
-	{
-		name: "Pomodoro app",
-		projectURL: "https://pomodoro.jabofecht.com",
-		githubURL: "https://github.com/JobaF/pomodoro-app",
-		tailwindImageTag: "bg-pomodoro",
-		pageURL: "/projects/pomodoro",
-		imageURL: "/pomodoro.jpg",
+		imageURL: "/mockup_carrental_macbook.jpg",
 		description:
 			"Responsive demo website that showcases a car rental page including a hero section, car picker, FAQ, team presentation and much more. ",
 	},
@@ -42,9 +31,17 @@ export const projects: Project[] = [
 		name: "Dictionary app",
 		projectURL: "https://dictionary.jabofecht.com/dictionary/keyboard",
 		githubURL: "https://github.com/JobaF/dictionary-app",
-		tailwindImageTag: "bg-dictionary",
 		pageURL: "/projects/dictionary",
-		imageURL: "/dictionary.jpg",
+		imageURL: "/mockup_dictionary_macbook.jpg",
+		description:
+			"Mobile ready dictionary app that shows meanings and synonyms for every word of the english language. It is also possible to change between dark and light mode and change the font family.",
+	},
+	{
+		name: "Pomodoro app",
+		projectURL: "https://pomodoro.jabofecht.com",
+		githubURL: "https://github.com/JobaF/pomodoro-app",
+		pageURL: "/projects/pomodoro",
+		imageURL: "/mockup_pomodoro_macbook.jpg",
 		description:
 			"Responsive demo website that showcases a car rental page including a hero section, car picker, FAQ, team presentation and much more. ",
 	},
@@ -52,9 +49,8 @@ export const projects: Project[] = [
 		name: "Age calculator",
 		projectURL: "https://datecalculator.jabofecht.com/",
 		githubURL: "https://github.com/JobaF/frontendmentor-age-calculator",
-		tailwindImageTag: "bg-clock",
 		pageURL: "/projects/agecalculator",
-		imageURL: "/clock.jpg",
+		imageURL: "/mockup_agecalculator_macbook.jpg",
 		description:
 			"Responsive demo website that showcases a car rental page including a hero section, car picker, FAQ, team presentation and much more. ",
 	},
@@ -62,9 +58,8 @@ export const projects: Project[] = [
 		name: "Apple-style calculator",
 		projectURL: "https://jobaf.github.io/odin-calculator/",
 		githubURL: "https://github.com/JobaF/odin-calculator",
-		tailwindImageTag: "bg-calculator",
 		pageURL: "/projects/applecalculator",
-		imageURL: "/calculator.jpg",
+		imageURL: "/mockup_calculator_macbook.jpg",
 		description:
 			"Responsive demo website that showcases a car rental page including a hero section, car picker, FAQ, team presentation and much more. ",
 	},

@@ -19,7 +19,7 @@ const EducationSection: FC<EducationSectionProps> = ({}) => {
 				{education.map((item, i) => (
 					<div
 						key={item.degree + i}
-						className="mt-4 flex w-72 flex-col rounded-lg bg-gray-800 p-6 shadow-md shadow-black"
+						className="mt-4 flex w-80  flex-col rounded-lg bg-gray-900 p-6 shadow-md shadow-black"
 					>
 						<div className="text-lg">{item.degree}</div>
 						<div className="text-sm text-gray-400">{item.institution}</div>
