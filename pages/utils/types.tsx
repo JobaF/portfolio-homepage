@@ -4,6 +4,7 @@ export type Project = {
 	githubURL: string
 	tailwindImageTag: string
 	pageURL: string
+	imageURL: string
 }
 export type Education = {
 	institution: string

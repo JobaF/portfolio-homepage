@@ -24,6 +24,7 @@ export const projects: Project[] = [
 		githubURL: "https://github.com/JobaF/car-rental",
 		tailwindImageTag: "bg-carRental",
 		pageURL: "/projects/carrental",
+		imageURL: "/carRental.png",
 	},
 	{
 		name: "Pomodoro app",
@@ -31,6 +32,7 @@ export const projects: Project[] = [
 		githubURL: "https://github.com/JobaF/pomodoro-app",
 		tailwindImageTag: "bg-pomodoro",
 		pageURL: "/projects/pomodoro",
+		imageURL: "/pomodoro.jpg",
 	},
 	{
 		name: "Dictionary app",
@@ -38,6 +40,7 @@ export const projects: Project[] = [
 		githubURL: "https://github.com/JobaF/dictionary-app",
 		tailwindImageTag: "bg-dictionary",
 		pageURL: "/projects/dictionary",
+		imageURL: "/dictionary.jpg",
 	},
 	{
 		name: "Age calculator",
@@ -45,6 +48,7 @@ export const projects: Project[] = [
 		githubURL: "https://github.com/JobaF/frontendmentor-age-calculator",
 		tailwindImageTag: "bg-clock",
 		pageURL: "/projects/agecalculator",
+		imageURL: "/clock.jpg",
 	},
 	{
 		name: "Apple-style calculator",
@@ -52,6 +56,7 @@ export const projects: Project[] = [
 		githubURL: "https://github.com/JobaF/odin-calculator",
 		tailwindImageTag: "bg-calculator",
 		pageURL: "/projects/applecalculator",
+		imageURL: "/calculator.jpg",
 	},
 ]
 

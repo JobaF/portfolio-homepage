@@ -1,9 +1,10 @@
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { FC } from "react"
+import Image from "next/image"
 import ArrowTopRightIcon from "../icons/ArrowTopRightIcon"
 import GithubIcon from "../icons/GithubIcon"
-import { cardVariants, projects } from "@/pages/utils/constants"
+import { HOSTNAME_CDN, cardVariants, projects } from "@/pages/utils/constants"
 
 interface ProjectSectionProps {}
 
@@ -25,9 +26,19 @@ const ProjectSection: FC<ProjectSectionProps> = ({}) => {
 						className="mt-8 h-72 w-72 items-start justify-center overflow-hidden rounded-lg shadow-lg shadow-black"
 					>
 						<div
-							className={`${project.tailwindImageTag} relative inset-0 flex h-full w-full items-start justify-between rounded-md bg-contain px-3 pt-2 text-left`}
+							className={`relative inset-0 h-full w-full rounded-md px-3 pt-2 text-left`}
 						>
-							<Link className="text-xl hover:text-black" href={project.pageURL}>
+							<div className="-z-10 h-full w-full">
+								<Image
+									src={HOSTNAME_CDN + project.imageURL}
+									alt={"image " + project.name}
+									fill={true}
+								/>
+							</div>
+							<Link
+								className="absolute top-3 text-xl hover:text-black"
+								href={project.pageURL}
+							>
 								{project.name}
 							</Link>
 							<ArrowTopRightIcon url={project.projectURL} />
