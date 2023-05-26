@@ -23,27 +23,25 @@ const ProjectSection: FC<ProjectSectionProps> = ({}) => {
 				{projects.map((project, i) => (
 					<div
 						key={project.name + i}
-						className="mt-8 h-72 w-72 items-start justify-center overflow-hidden rounded-lg shadow-lg shadow-black"
+						className="mt-8 overflow-hidden rounded-lg shadow-lg shadow-black"
 					>
-						<div
-							className={`relative inset-0 h-full w-full rounded-md px-3 pt-2 text-left`}
-						>
-							<div className="-z-10 h-full w-full">
-								<Image
-									src={HOSTNAME_CDN + project.imageURL}
-									alt={"image " + project.name}
-									fill={true}
-								/>
-							</div>
-							<Link
-								className="absolute top-3 text-xl hover:text-black"
-								href={project.pageURL}
-							>
-								{project.name}
-							</Link>
-							<ArrowTopRightIcon url={project.projectURL} />
-							<GithubIcon url={project.githubURL} />
+						<div className="aspect-square ">
+							<Image
+								src={HOSTNAME_CDN + project.imageURL}
+								alt={"image " + project.name}
+								width={300}
+								height={300}
+								className="rounded-lg"
+							/>
 						</div>
+						<Link
+							className="text-center text-2xl font-bold hover:text-gray-400"
+							href={project.pageURL}
+						>
+							{project.name}
+						</Link>
+						{/* <ArrowTopRightIcon url={project.projectURL} />
+							<GithubIcon url={project.githubURL} /> */}
 					</div>
 				))}
 			</motion.div>

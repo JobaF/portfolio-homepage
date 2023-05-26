@@ -4,8 +4,6 @@ export default function Document() {
 	return (
 		<Html lang="en">
 			<Head>
-				<title>Jabo Fecht</title>
-
 				<link
 					href="https://fonts.googleapis.com/css2?family=Sora&display=swap"
 					rel="stylesheet"
