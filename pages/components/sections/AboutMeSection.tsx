@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import { FC } from "react"
-import { cardVariants } from "../../utils/constants"
+import { cardVariants } from "../../../utils/constants"
 interface AboutMeSectionProps {}
 
 const AboutMeSection: FC<AboutMeSectionProps> = ({}) => {

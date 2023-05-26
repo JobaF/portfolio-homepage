@@ -13,7 +13,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				crimson: ["Sora", ...defaultTheme.fontFamily.sans],
+				greatVibes: ["Great Vibes", ...defaultTheme.fontFamily.sans],
 			},
 			backgroundImage: {
 				pomodoro: "url(/pomodoro.jpg)",

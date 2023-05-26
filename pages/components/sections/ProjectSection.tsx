@@ -4,7 +4,7 @@ import { FC } from "react"
 import Image from "next/image"
 import ArrowTopRightIcon from "../icons/ArrowTopRightIcon"
 import GithubIcon from "../icons/GithubIcon"
-import { HOSTNAME_CDN, cardVariants, projects } from "@/pages/utils/constants"
+import { HOSTNAME_CDN, cardVariants, projects } from "@/utils/constants"
 
 interface ProjectSectionProps {}
 

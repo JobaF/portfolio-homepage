@@ -1,6 +1,8 @@
-import { FC, RefObject, useState } from "react"
+import { FC, useState } from "react"
 import BurgerIcon from "./icons/BurgerIcon"
 import Link from "next/link"
+import { Great_Vibes } from "next/font/google"
+const specialFont = Great_Vibes({ subsets: ["latin"], weight: "400" })
 
 interface NavbarProps {}
 
@@ -22,9 +24,12 @@ const Navbar: FC<NavbarProps> = ({}) => {
 					onClick={() => {
 						if (isMenuOpen) setIsMenuOpen(false)
 					}}
-					className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border p-1 text-lg hover:bg-gray-700"
+					className={
+						specialFont.className +
+						" flex cursor-pointer items-center justify-center rounded-full p-1 text-2xl hover:text-gray-400"
+					}
 				>
-					JF
+					Jabo Fecht
 				</Link>
 				<BurgerIcon
 					onClickFunction={() => setIsMenuOpen((prev) => !prev)}

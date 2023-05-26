@@ -1,4 +1,4 @@
-import { cardVariants, workExperience } from "@/pages/utils/constants"
+import { cardVariants, workExperience } from "@/utils/constants"
 import { motion } from "framer-motion"
 import { FC } from "react"
 
