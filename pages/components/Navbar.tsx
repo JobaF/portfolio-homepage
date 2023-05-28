@@ -18,19 +18,25 @@ const Navbar: FC<NavbarProps> = ({}) => {
 
 	return (
 		<>
-			<nav className="z-30 flex h-14 items-center justify-between bg-gray-800 px-8 text-white">
+			<nav className="z-30 flex h-14 items-center justify-between bg-gray-800 px-8 text-white md:justify-center">
 				<Link
 					href="/"
 					onClick={() => {
 						if (isMenuOpen) setIsMenuOpen(false)
 					}}
 					className={
-						specialFont.className +
-						" flex cursor-pointer items-center justify-center rounded-full p-1 text-2xl hover:text-gray-400"
+						"absolute left-5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text p-1 text-xl font-bold text-transparent hover:text-gray-400"
 					}
 				>
-					Jabo Fecht
+					JaboFecht
 				</Link>
+				<div className="hidden gap-5 sm:flex">
+					{menuPoints.map((menuPoint) => (
+						<Link className="hover:text-gray-700" href={menuPoint.link}>
+							{menuPoint.text}
+						</Link>
+					))}
+				</div>
 				<BurgerIcon
 					onClickFunction={() => setIsMenuOpen((prev) => !prev)}
 					isMenuOpen={isMenuOpen}

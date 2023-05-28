@@ -9,7 +9,7 @@ interface BurgerIconProps {
 const BurgerIcon: FC<BurgerIconProps> = ({ onClickFunction, isMenuOpen }) => {
 	return (
 		<div
-			className="h-9 w-9 cursor-pointer rounded-md p-0.5 hover:bg-gray-700 sm:hidden"
+			className="absolute right-5 h-9 w-9 cursor-pointer rounded-md p-0.5 hover:bg-gray-700 sm:hidden"
 			onClick={onClickFunction}
 		>
 			{isMenuOpen ? (

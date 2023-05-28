@@ -10,61 +10,63 @@ interface ProjectSectionProps {}
 
 const ProjectSection: FC<ProjectSectionProps> = ({}) => {
 	return (
-		<section className="mb-12 mt-20 flex flex-col items-center" id="projects">
-			<h1 className=" bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-center text-4xl font-bold text-transparent">
-				My Projects
-			</h1>
-			<motion.div
-				variants={cardVariants}
-				initial="offscreen"
-				whileInView="onscreen"
-				viewport={{ once: true }}
-			>
-				{projects.map((project, i) => (
-					<div
-						key={project.name + i}
-						className="mx-5 mt-8 flex w-80 max-w-md flex-col items-center overflow-hidden rounded-lg px-5 shadow-md shadow-black"
-					>
-						<Link
-							className="mt-3 text-center text-2xl font-bold hover:text-gray-500 hover:opacity-30"
-							href={project.projectURL}
-							target="_blank"
+		<section className="mx-auto mb-12 mt-20" id="projects">
+			<div className="flex max-w-6xl flex-col items-center">
+				<h1 className=" bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-center text-4xl font-bold text-transparent">
+					My Projects
+				</h1>
+				<motion.div
+					variants={cardVariants}
+					initial="offscreen"
+					whileInView="onscreen"
+					viewport={{ once: true }}
+				>
+					{projects.map((project, i) => (
+						<div
+							key={project.name + i}
+							className="mx-5 mt-8 flex flex-col items-center overflow-hidden rounded-lg px-5 shadow-md shadow-black"
 						>
-							{project.name}
-
-							<div className="p-2">
-								<Image
-									src={HOSTNAME_CDN + project.imageURL}
-									width={400}
-									height={400}
-									alt={"mockup " + project.name}
-								/>
-							</div>
-						</Link>
-						<p className="mb-3 py-2 text-justify text-gray-400">
-							{project.description}
-						</p>
-						<div className="flex w-full justify-between gap-5 ">
 							<Link
+								className="mt-3 text-center text-2xl font-bold hover:text-gray-500 hover:opacity-30"
 								href={project.projectURL}
 								target="_blank"
-								className="mb-3 flex h-8 w-1/2 items-center justify-center gap-2 rounded-md bg-gray-500 px-4  shadow-md shadow-black hover:bg-gray-900"
 							>
-								<p>Demo</p>
-								<ArrowTopRightIcon />
+								{project.name}
+
+								<div className="p-2">
+									<Image
+										src={HOSTNAME_CDN + project.imageURL}
+										width={400}
+										height={400}
+										alt={"mockup " + project.name}
+									/>
+								</div>
 							</Link>
-							<Link
-								href={project.githubURL}
-								target="_blank"
-								className="mb-3 flex h-8 w-1/2 items-center justify-center gap-2 rounded-md bg-gray-500 px-4  shadow-md shadow-black hover:bg-gray-900"
-							>
-								<p>Code</p>
-								<GithubIcon />
-							</Link>
+							<p className="mb-3 py-2 text-justify text-gray-400">
+								{project.description}
+							</p>
+							<div className="flex w-full justify-center gap-5 ">
+								<Link
+									href={project.projectURL}
+									target="_blank"
+									className="mb-3 flex h-8 w-48 items-center justify-center gap-2 rounded-md bg-gray-500 px-4  shadow-md shadow-black hover:bg-gray-900"
+								>
+									<p>Demo</p>
+									<ArrowTopRightIcon />
+								</Link>
+								<Link
+									href={project.githubURL}
+									target="_blank"
+									className="mb-3 flex h-8 w-48 items-center justify-center gap-2 rounded-md bg-gray-500 px-4  shadow-md shadow-black hover:bg-gray-900"
+								>
+									<p>Code</p>
+									<GithubIcon />
+								</Link>
+							</div>
 						</div>
-					</div>
-				))}
-			</motion.div>
+					))}
+				</motion.div>
+			</div>
 		</section>
 	)
 }
