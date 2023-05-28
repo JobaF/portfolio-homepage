@@ -1,7 +1,9 @@
 import { FC } from "react"
 import Image from "next/image"
 import { HOSTNAME_CDN } from "@/utils/values"
+import { Inter } from "next/font/google"
 interface HomeSectionProps {}
+const inter = Inter({ subsets: ["latin"] })
 
 const HomeSection: FC<HomeSectionProps> = ({}) => {
 	return (
@@ -18,8 +20,8 @@ const HomeSection: FC<HomeSectionProps> = ({}) => {
 					/>
 				</div>
 			</div>
-			<div className="flex animate-fade1 flex-col items-center text-center">
-				<h3 className="mt-12 text-4xl lg:text-5xl">
+			<div className="flex animate-fade1 flex-col items-center text-center ">
+				<h3 className={"mt-12 text-4xl lg:text-5xl " + inter.className}>
 					Hi, <br />
 					I&apos;m{" "}
 					<span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text font-bold text-transparent">

@@ -25,7 +25,7 @@ export const projects: Project[] = [
 		pageURL: "/projects/carrental",
 		imageURL: "/mockup_carrental_macbook.jpg",
 		description:
-			"Responsive demo website that showcases a car rental page including a hero section, car picker, FAQ, team presentation and much more. ",
+			"Welcome to my responsive demo website, where I showcase a captivating car rental page. Immerse yourself in an intuitive and user-friendly experience as you explore the various sections. From the eye-catching hero section to the convenient car picker, every element has been designed with you in mind. Find answers to common questions in the FAQ section and get to know the team through the presentation.",
 	},
 	{
 		name: "Dictionary app",

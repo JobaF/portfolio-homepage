@@ -30,9 +30,13 @@ const Navbar: FC<NavbarProps> = ({}) => {
 				>
 					JaboFecht
 				</Link>
-				<div className="hidden gap-5 sm:flex">
-					{menuPoints.map((menuPoint) => (
-						<Link className="hover:text-gray-700" href={menuPoint.link}>
+				<div className="hidden gap-5 text-gray-400 sm:flex">
+					{menuPoints.map((menuPoint, i) => (
+						<Link
+							key={menuPoint.text}
+							className="hover:text-gray-700"
+							href={menuPoint.link}
+						>
 							{menuPoint.text}
 						</Link>
 					))}
