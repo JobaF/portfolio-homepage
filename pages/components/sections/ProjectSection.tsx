@@ -85,7 +85,10 @@ const ProjectSection: FC<ProjectSectionProps> = ({}) => {
 										} flex flex-wrap gap-2 text-xs text-gray-300`}
 									>
 										{project.developmentItems.map((item) => (
-											<li className="rounded bg-indigo-500 bg-opacity-50 px-2 py-0.5">
+											<li
+												key={project.name + item}
+												className="rounded bg-indigo-500 bg-opacity-50 px-2 py-0.5"
+											>
 												{item}
 											</li>
 										))}
