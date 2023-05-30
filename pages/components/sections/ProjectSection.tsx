@@ -22,9 +22,9 @@ const ProjectSection: FC<ProjectSectionProps> = ({}) => {
 					viewport={{ once: true }}
 					className="mt-5 block md:hidden"
 				>
-					{projects.map((project) => {
+					{projects.map((project, i) => {
 						return (
-							<div className="mb-16 px-3">
+							<div key={project.name + i} className="mb-16 px-3">
 								<div
 									className="relative overflow-hidden rounded-md border border-black p-4"
 									style={{
