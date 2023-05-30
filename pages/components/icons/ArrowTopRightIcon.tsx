@@ -10,7 +10,7 @@ const ArrowTopRightIcon: FC<ArrowTopRightIconProps> = () => {
 			viewBox="0 0 24 24"
 			strokeWidth={2}
 			stroke="white"
-			className="h-6 w-6"
+			className="h-6 w-6 hover:stroke-indigo-500"
 		>
 			<path
 				strokeLinecap="round"

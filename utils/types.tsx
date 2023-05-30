@@ -5,6 +5,7 @@ export type Project = {
 	pageURL: string
 	imageURL: string
 	description: string
+	developmentItems: string[]
 }
 export type Education = {
 	institution: string

@@ -1,8 +1,6 @@
 import { FC, useState } from "react"
 import BurgerIcon from "./icons/BurgerIcon"
 import Link from "next/link"
-import { Great_Vibes } from "next/font/google"
-const specialFont = Great_Vibes({ subsets: ["latin"], weight: "400" })
 
 interface NavbarProps {}
 

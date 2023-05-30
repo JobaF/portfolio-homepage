@@ -9,7 +9,7 @@ const AboutMeSection: FC<AboutMeSectionProps> = ({}) => {
 			className="mt-20 flex flex-col items-center justify-center p-7"
 			id="aboutme"
 		>
-			<div className="max-w-lg text-justify">
+			<div className="max-w-4xl text-justify">
 				<h1 className="my-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-center text-4xl font-bold text-transparent">
 					About me
 				</h1>
@@ -18,9 +18,9 @@ const AboutMeSection: FC<AboutMeSectionProps> = ({}) => {
 					initial="offscreen"
 					whileInView="onscreen"
 					viewport={{ once: true }}
-					className="lg:text-xl"
+					className="text-lg lg:text-xl"
 				>
-					<p className="text-md mt-3 text-gray-400 ">
+					<p className="text-md mt-5 text-gray-400 ">
 						Hello! My name is Jabo and I&apos;m an ambitious front-end developer
 						who finds joy in bringing ideas to life on the internet. Recently, I
 						completed my Masters in Information Systems, which has equipped me

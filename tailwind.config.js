@@ -12,9 +12,7 @@ module.exports = {
 	],
 	theme: {
 		extend: {
-			fontFamily: {
-				greatVibes: ["Great Vibes", ...defaultTheme.fontFamily.sans],
-			},
+			fontFamily: {},
 			backgroundImage: {
 				pomodoro: "url(/pomodoro.jpg)",
 				dictionary: "url(/dictionary.jpg)",

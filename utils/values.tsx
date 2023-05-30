@@ -19,49 +19,67 @@ export const cardVariants: Variants = {
 
 export const projects: Project[] = [
 	{
-		name: "Car rental",
+		name: "Car Rental Website",
 		projectURL: "https://carrental.jabofecht.com/",
 		githubURL: "https://github.com/JobaF/car-rental",
 		pageURL: "/projects/carrental",
-		imageURL: "/mockup_carrental_macbook.jpg",
+		imageURL: "/carrental.jpg",
 		description:
-			"Welcome to my responsive demo website, where I showcase a captivating car rental page. Immerse yourself in an intuitive and user-friendly experience as you explore the various sections. From the eye-catching hero section to the convenient car picker, every element has been designed with you in mind. Find answers to common questions in the FAQ section and get to know the team through the presentation.",
+			"Responsive car rental demo website, where I showcase how a car rental could design their homepage. I designed it to be responsive and show features, FAQs, the team and much more. ",
+		developmentItems: [
+			"ReactJS",
+			"NextJS",
+			"TailwindCSS",
+			"S3 + Cloudfront",
+			"TypeScript",
+		],
 	},
 	{
-		name: "Dictionary app",
+		name: "Dictionary App",
 		projectURL: "https://dictionary.jabofecht.com/dictionary/keyboard",
 		githubURL: "https://github.com/JobaF/dictionary-app",
 		pageURL: "/projects/dictionary",
-		imageURL: "/mockup_dictionary_macbook.jpg",
+		imageURL: "/dictionary_squooshed.jpg",
 		description:
 			"Mobile ready dictionary app that shows meanings and synonyms for every word of the english language. It is also possible to change between dark and light mode and change the font family.",
+		developmentItems: [
+			"ReactJS",
+			"NextJS",
+			"TailwindCSS",
+			"DictionaryAPI",
+			"React Query",
+			"TypeScript",
+		],
 	},
 	{
-		name: "Pomodoro app",
+		name: "Pomodoro App",
 		projectURL: "https://pomodoro.jabofecht.com",
 		githubURL: "https://github.com/JobaF/pomodoro-app",
 		pageURL: "/projects/pomodoro",
-		imageURL: "/mockup_pomodoro_macbook.jpg",
+		imageURL: "/pomodoro_squooshed.jpg",
 		description:
 			"Responsive demo website that showcases a car rental page including a hero section, car picker, FAQ, team presentation and much more. ",
+		developmentItems: ["ReactJS", "TailwindCSS", "Jotai", "TypeScript"],
 	},
 	{
-		name: "Age calculator",
+		name: "Age Calculator",
 		projectURL: "https://datecalculator.jabofecht.com/",
 		githubURL: "https://github.com/JobaF/frontendmentor-age-calculator",
 		pageURL: "/projects/agecalculator",
-		imageURL: "/mockup_agecalculator_macbook.jpg",
+		imageURL: "/datecalculator_squooshed.jpg",
 		description:
 			"Responsive demo website that showcases a car rental page including a hero section, car picker, FAQ, team presentation and much more. ",
+		developmentItems: ["ReactJS", "TailwindCSS", "TypeScript"],
 	},
 	{
-		name: "Apple-style calculator",
+		name: "Apple-style Calculator",
 		projectURL: "https://jobaf.github.io/odin-calculator/",
 		githubURL: "https://github.com/JobaF/odin-calculator",
 		pageURL: "/projects/applecalculator",
-		imageURL: "/mockup_calculator_macbook.jpg",
+		imageURL: "/applecalculator_squooshed.jpg",
 		description:
 			"Responsive demo website that showcases a car rental page including a hero section, car picker, FAQ, team presentation and much more. ",
+		developmentItems: ["VanillaJS", "Plain CSS"],
 	},
 ]
 
