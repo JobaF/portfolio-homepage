@@ -20,7 +20,66 @@ const ProjectSection: FC<ProjectSectionProps> = ({}) => {
 					initial="offscreen"
 					whileInView="onscreen"
 					viewport={{ once: true }}
-					className="mt-5"
+					className="mt-5 block md:hidden"
+				>
+					{projects.map((project) => {
+						return (
+							<div className="mb-16 px-3">
+								<div
+									className="relative overflow-hidden rounded-md border border-black p-4"
+									style={{
+										backgroundImage: `linear-gradient(
+											rgba(0, 0, 0, 0.85), 
+											rgba(0, 0, 0, 0.85)
+										  ),url(${HOSTNAME_CDN + project.imageURL})`,
+										backgroundSize: "cover",
+										backgroundBlendMode: "0.5",
+									}}
+								>
+									<p className={` text-indigo-500 `}>Featured project</p>
+									<h1 className={`text-2xl font-bold text-gray-300`}>
+										<Link
+											href={project.projectURL}
+											target="_blank"
+											className="hover:text-gray-500"
+										>
+											{project.name}
+										</Link>
+									</h1>
+									<p
+										className={`text-md mb-6 mt-6 rounded-lg text-justify text-gray-400`}
+									>
+										{project.description}
+									</p>
+									<ul className={`flex flex-wrap gap-2 text-xs text-gray-300`}>
+										{project.developmentItems.map((item) => (
+											<li
+												key={project.name + item}
+												className="rounded bg-indigo-500 bg-opacity-50 px-2 py-0.5"
+											>
+												{item}
+											</li>
+										))}
+									</ul>
+									<div className={`mt-6 flex gap-5`}>
+										<Link href={project.projectURL} target="_blank">
+											<ArrowTopRightIcon />
+										</Link>
+										<Link href={project.githubURL} target="_blank">
+											<GithubIcon />
+										</Link>
+									</div>
+								</div>
+							</div>
+						)
+					})}
+				</motion.div>
+				<motion.div
+					variants={cardVariants}
+					initial="offscreen"
+					whileInView="onscreen"
+					viewport={{ once: true }}
+					className="mt-5 hidden md:block"
 				>
 					{projects.map((project, i) => {
 						const even = i % 2 === 0
@@ -62,7 +121,7 @@ const ProjectSection: FC<ProjectSectionProps> = ({}) => {
 									<h1
 										className={`${
 											even ? "text-right" : "text-left"
-										} text-2xl text-gray-300 `}
+										} text-2xl font-bold text-gray-300 `}
 									>
 										<Link
 											href={project.projectURL}

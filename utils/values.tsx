@@ -41,7 +41,7 @@ export const projects: Project[] = [
 		pageURL: "/projects/dictionary",
 		imageURL: "/dictionary_squooshed.jpg",
 		description:
-			"Mobile ready dictionary app that shows meanings and synonyms for every word of the english language. It is also possible to change between dark and light mode and change the font family.",
+			"Dynamic dictionary app that shows meanings and synonyms for every word of the english language. It is also possible to change between dark and light mode and change the font family.",
 		developmentItems: [
 			"ReactJS",
 			"NextJS",
@@ -58,18 +58,8 @@ export const projects: Project[] = [
 		pageURL: "/projects/pomodoro",
 		imageURL: "/pomodoro_squooshed.jpg",
 		description:
-			"Responsive demo website that showcases a car rental page including a hero section, car picker, FAQ, team presentation and much more. ",
+			"Customizable Pomodoro Timer: Take charge of your work sessions with a versatile Pomodoro timer. Tailor your pomodoro, short break, and long break durations according to your needs. Personalize the timer's font and color to create a visually pleasing experience.",
 		developmentItems: ["ReactJS", "TailwindCSS", "Jotai", "TypeScript"],
-	},
-	{
-		name: "Age Calculator",
-		projectURL: "https://datecalculator.jabofecht.com/",
-		githubURL: "https://github.com/JobaF/frontendmentor-age-calculator",
-		pageURL: "/projects/agecalculator",
-		imageURL: "/datecalculator_squooshed.jpg",
-		description:
-			"Responsive demo website that showcases a car rental page including a hero section, car picker, FAQ, team presentation and much more. ",
-		developmentItems: ["ReactJS", "TailwindCSS", "TypeScript"],
 	},
 	{
 		name: "Apple-style Calculator",
@@ -78,7 +68,7 @@ export const projects: Project[] = [
 		pageURL: "/projects/applecalculator",
 		imageURL: "/applecalculator_squooshed.jpg",
 		description:
-			"Responsive demo website that showcases a car rental page including a hero section, car picker, FAQ, team presentation and much more. ",
+			"Simple calculator app made in vanilla javascript which resembles the MacOS built-in calculator. ",
 		developmentItems: ["VanillaJS", "Plain CSS"],
 	},
 ]
