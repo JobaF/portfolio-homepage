@@ -6,7 +6,7 @@ interface WorkExperienceSectionProps {}
 
 const WorkExperienceSection: FC<WorkExperienceSectionProps> = ({}) => {
 	return (
-		<section className="mb-10 mt-10" id="experience">
+		<section className="mb-10 mt-32" id="experience">
 			<div className="mx-auto flex max-w-4xl flex-col items-center px-3">
 				<h1 className="mb-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-center text-4xl font-bold text-transparent">
 					Work Experience

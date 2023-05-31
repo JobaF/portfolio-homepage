@@ -6,7 +6,7 @@ interface EducationSectionProps {}
 
 const EducationSection: FC<EducationSectionProps> = ({}) => {
 	return (
-		<section className="mb-10 mt-10" id="education">
+		<section className="mt-32" id="education">
 			<div className="mx-auto flex max-w-4xl flex-col items-center px-3">
 				<h1 className="mb-4 w-fit bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-4xl font-bold text-transparent">
 					Education

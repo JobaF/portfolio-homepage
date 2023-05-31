@@ -10,9 +10,9 @@ interface ProjectSectionProps {}
 
 const ProjectSection: FC<ProjectSectionProps> = ({}) => {
 	return (
-		<section className="mx-auto mb-12 mt-20" id="projects">
-			<div className="flex max-w-4xl flex-col items-center">
-				<h1 className=" bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-center text-[36px] font-bold text-transparent">
+		<section className="mx-auto mt-32" id="projects">
+			<div className="flex max-w-5xl flex-col items-center">
+				<h1 className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-center text-[36px] font-bold text-transparent">
 					My Projects
 				</h1>
 				<motion.div
@@ -79,14 +79,14 @@ const ProjectSection: FC<ProjectSectionProps> = ({}) => {
 					initial="offscreen"
 					whileInView="onscreen"
 					viewport={{ once: true }}
-					className="mt-5 hidden md:block"
+					className="mt-12 hidden md:block"
 				>
 					{projects.map((project, i) => {
 						const even = i % 2 === 0
 						return (
 							<div
 								key={project.name + i}
-								className="mb-24 overflow-hidden p-2"
+								className="mb-24 overflow-hidden p-2 "
 								style={{
 									display: "grid",
 									gridTemplateColumns: "repeat(2, 1fr)",
@@ -108,7 +108,7 @@ const ProjectSection: FC<ProjectSectionProps> = ({}) => {
 									/>
 								</Link>
 								<div
-									className="relative pr-4"
+									className="relative flex flex-col justify-between pr-4 "
 									style={{ gridArea: even ? "right" : "left" }}
 								>
 									<p

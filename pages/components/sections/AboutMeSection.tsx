@@ -9,8 +9,8 @@ const AboutMeSection: FC<AboutMeSectionProps> = ({}) => {
 			className="mt-20 flex flex-col items-center justify-center p-7"
 			id="aboutme"
 		>
-			<div className="max-w-4xl text-justify">
-				<h1 className="my-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-center text-4xl font-bold text-transparent">
+			<div className="flex max-w-5xl flex-col items-center text-justify">
+				<h1 className="my-4 w-fit bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-center text-4xl font-bold text-transparent">
 					About me
 				</h1>
 				<motion.div

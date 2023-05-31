@@ -7,9 +7,9 @@ const inter = Inter({ subsets: ["latin"] })
 
 const HomeSection: FC<HomeSectionProps> = ({}) => {
 	return (
-		<section id="home" className="flex justify-center">
+		<section id="home" className=" flex h-[60vh] justify-center">
 			{/* Avatar with effect */}
-			<div className="grid max-w-4xl items-center justify-center md:grid-cols-2">
+			<div className="mx-auto grid w-full max-w-5xl grid-cols-1 items-center justify-between md:grid-cols-2">
 				<div className="mt-14 flex animate-fade1 flex-col items-center justify-center">
 					<div className="absolute aspect-square h-72 rounded-full bg-gradient-to-r from-sky-600 to-indigo-600 opacity-60 blur-xl lg:h-96"></div>
 					<div className="relative aspect-square h-72 lg:h-96">
