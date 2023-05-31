@@ -41,7 +41,7 @@ export const projects: Project[] = [
 		pageURL: "/projects/dictionary",
 		imageURL: "/dictionary_squooshed.jpg",
 		description:
-			"Dynamic dictionary app that shows meanings and synonyms for every word of the english language. It is also possible to change between dark and light mode and change the font family.",
+			"Dynamic dictionary app where you can query every word of the dictionary fully type-safe with the help of zod. It is also possible to hear the pronunciation of the word, switch to dark mode and change the font family.",
 		developmentItems: [
 			"ReactJS",
 			"NextJS",
@@ -49,6 +49,9 @@ export const projects: Project[] = [
 			"DictionaryAPI",
 			"React Query",
 			"TypeScript",
+			"zod",
+			"use-sound",
+			"nextjs-progressbar",
 		],
 	},
 	{

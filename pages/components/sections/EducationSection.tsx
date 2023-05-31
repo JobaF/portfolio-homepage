@@ -28,6 +28,7 @@ const EducationSection: FC<EducationSectionProps> = ({}) => {
 							</div>
 							<div className="text-sm text-gray-400 md:text-lg">
 								{item.period}
+								np{" "}
 							</div>
 							<ul className="flex max-w-lg list-disc flex-col gap-1 pl-3 pt-2 text-sm md:text-lg">
 								{item.infos.map((info, i) => (
