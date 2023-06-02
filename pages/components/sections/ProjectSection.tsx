@@ -25,17 +25,16 @@ const ProjectSection: FC<ProjectSectionProps> = ({}) => {
 					{projects.map((project, i) => {
 						return (
 							<div key={project.name + i} className="mb-16 px-3">
-								<div
-									className="relative overflow-hidden rounded-md border border-black p-4"
-									style={{
-										backgroundImage: `linear-gradient(
-											rgba(0, 0, 0, 0.85), 
-											rgba(0, 0, 0, 0.85)
-										  ),url(${HOSTNAME_CDN + project.imageURL})`,
-										backgroundSize: "cover",
-										backgroundBlendMode: "0.5",
-									}}
-								>
+								<div className="relative overflow-hidden rounded-md border border-black p-4">
+									<Image
+										src={HOSTNAME_CDN + project.imageURL}
+										alt="background image project"
+										className="absolute h-full w-full"
+										fill
+										style={{
+											opacity: "0.1",
+										}}
+									/>
 									<p className={` text-indigo-500 `}>Featured project</p>
 									<h1 className={`text-2xl font-bold text-gray-300`}>
 										<Link
