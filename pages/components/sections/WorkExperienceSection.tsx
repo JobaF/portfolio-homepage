@@ -22,13 +22,11 @@ const WorkExperienceSection: FC<WorkExperienceSectionProps> = ({}) => {
 							key={item.position + i}
 							className="mt-4 flex w-96 flex-col rounded-lg bg-gray-900 p-6 text-justify shadow-md shadow-black"
 						>
-							<div className="text-lg md:text-2xl">{item.position}</div>
-							<div className="text-sm text-gray-400 md:text-lg">
+							<p className="text-lg md:text-2xl">{item.position}</p>
+							<p className="text-sm text-gray-400 md:text-lg">
 								{item.institution}
-							</div>
-							<div className="text-sm text-gray-400 md:text-lg">
-								{item.period}
-							</div>
+							</p>
+							<p className="text-sm text-gray-400 md:text-lg">{item.period}</p>
 							<ul className="flex list-disc flex-col gap-1 pl-3 pt-2 text-sm md:text-lg">
 								{item.infos.map((info, i) => (
 									<li key={item.institution + i}>{info}</li>
