@@ -22,14 +22,11 @@ const EducationSection: FC<EducationSectionProps> = ({}) => {
 							key={item.degree + i}
 							className="mt-4 flex w-96 flex-col rounded-lg bg-gray-900 p-6 shadow-md shadow-black"
 						>
-							<div className="text-lg md:text-2xl">{item.degree}</div>
-							<div className="text-sm text-gray-400 md:text-lg">
+							<h2 className="text-lg md:text-2xl">{item.degree}</h2>
+							<p className="text-sm text-gray-400 md:text-lg">
 								{item.institution}
-							</div>
-							<div className="text-sm text-gray-400 md:text-lg">
-								{item.period}
-								np{" "}
-							</div>
+							</p>
+							<p className="text-sm text-gray-400 md:text-lg">{item.period}</p>
 							<ul className="flex max-w-lg list-disc flex-col gap-1 pl-3 pt-2 text-sm md:text-lg">
 								{item.infos.map((info, i) => (
 									<li key={item.degree + i}>{info}</li>
